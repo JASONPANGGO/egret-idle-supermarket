@@ -1,0 +1,255 @@
+{
+	"groups": [
+		{
+			"keys": "arroe1_ui_png,ctat_button_png,eb_bg_jpg,fame1_ui_png,gf_hand_png,key0_ui_png,key1_ui_png,key2_ui_png,key3_ui_png,lang_button_png,lang_logo_png,lang_win_png,pb_bg_jpg,shadow_png,spring0_ui_png,spring1_ui_png,spring2_ui_png,streamer_json,streamer1_png,streamer2_png,streamer3_png,streamer4_png,streamer5_png,streamer6_png,streamer7_png,streamer8_png,whitefame1_ui_png,whitekey1_ui_png,whitespring0_ui_png,whitespring1_ui_png,win1_ui_jpg,xlz_key_001_png,xlz_key_002_png,xlz_key_003_png,xlz_key_004_png,xlz_key_005_png,xlz_key_006_png,xlz_unlock_001_png,xlz_unlock_002_png,xlz_unlock_003_png,xlz_unlock_004_png,xlz_unlock_005_png,xlz_unlock_006_png,description_json,gameConfig_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/image/arroe1_ui.png",
+			"type": "image",
+			"name": "arroe1_ui_png"
+		},
+		{
+			"url": "assets/image/ctat_button.png",
+			"type": "image",
+			"name": "ctat_button_png"
+		},
+		{
+			"url": "assets/image/eb_bg.jpg",
+			"type": "image",
+			"name": "eb_bg_jpg"
+		},
+		{
+			"url": "assets/image/fame1_ui.png",
+			"type": "image",
+			"name": "fame1_ui_png"
+		},
+		{
+			"url": "assets/image/gf_hand.png",
+			"type": "image",
+			"name": "gf_hand_png"
+		},
+		{
+			"url": "assets/image/key0_ui.png",
+			"type": "image",
+			"name": "key0_ui_png"
+		},
+		{
+			"url": "assets/image/key1_ui.png",
+			"type": "image",
+			"name": "key1_ui_png"
+		},
+		{
+			"url": "assets/image/key2_ui.png",
+			"type": "image",
+			"name": "key2_ui_png"
+		},
+		{
+			"url": "assets/image/key3_ui.png",
+			"type": "image",
+			"name": "key3_ui_png"
+		},
+		{
+			"url": "assets/image/pb_bg.jpg",
+			"type": "image",
+			"name": "pb_bg_jpg"
+		},
+		{
+			"url": "assets/image/shadow.png",
+			"type": "image",
+			"name": "shadow_png"
+		},
+		{
+			"url": "assets/image/spring0_ui.png",
+			"type": "image",
+			"name": "spring0_ui_png"
+		},
+		{
+			"url": "assets/image/spring1_ui.png",
+			"type": "image",
+			"name": "spring1_ui_png"
+		},
+		{
+			"url": "assets/image/spring2_ui.png",
+			"type": "image",
+			"name": "spring2_ui_png"
+		},
+		{
+			"url": "assets/image/streamer1.png",
+			"type": "image",
+			"name": "streamer1_png"
+		},
+		{
+			"url": "assets/image/streamer2.png",
+			"type": "image",
+			"name": "streamer2_png"
+		},
+		{
+			"url": "assets/image/streamer3.png",
+			"type": "image",
+			"name": "streamer3_png"
+		},
+		{
+			"url": "assets/image/streamer4.png",
+			"type": "image",
+			"name": "streamer4_png"
+		},
+		{
+			"url": "assets/image/streamer5.png",
+			"type": "image",
+			"name": "streamer5_png"
+		},
+		{
+			"url": "assets/image/streamer6.png",
+			"type": "image",
+			"name": "streamer6_png"
+		},
+		{
+			"url": "assets/image/streamer7.png",
+			"type": "image",
+			"name": "streamer7_png"
+		},
+		{
+			"url": "assets/image/streamer8.png",
+			"type": "image",
+			"name": "streamer8_png"
+		},
+		{
+			"url": "assets/image/whitefame1_ui.png",
+			"type": "image",
+			"name": "whitefame1_ui_png"
+		},
+		{
+			"url": "assets/image/whitekey1_ui.png",
+			"type": "image",
+			"name": "whitekey1_ui_png"
+		},
+		{
+			"url": "assets/image/whitespring0_ui.png",
+			"type": "image",
+			"name": "whitespring0_ui_png"
+		},
+		{
+			"url": "assets/image/whitespring1_ui.png",
+			"type": "image",
+			"name": "whitespring1_ui_png"
+		},
+		{
+			"url": "assets/image/win1_ui.jpg",
+			"type": "image",
+			"name": "win1_ui_jpg"
+		},
+		{
+			"url": "assets/sound/bm_bgm.mp3",
+			"type": "sound",
+			"name": "bm_bgm_mp3"
+		},
+		{
+			"url": "assets/sound/smopen.mp3",
+			"type": "sound",
+			"name": "smopen_mp3"
+		},
+		{
+			"url": "assets/sound/smunlock.mp3",
+			"type": "sound",
+			"name": "smunlock_mp3"
+		},
+		{
+			"url": "assets/sound/smwin.mp3",
+			"type": "sound",
+			"name": "smwin_mp3"
+		},
+		{
+			"url": "assets/image/lang/lang_button.png",
+			"type": "image",
+			"name": "lang_button_png"
+		},
+		{
+			"url": "assets/image/lang/lang_logo.png",
+			"type": "image",
+			"name": "lang_logo_png"
+		},
+		{
+			"url": "assets/image/lang/lang_win.png",
+			"type": "image",
+			"name": "lang_win_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_001.png",
+			"type": "image",
+			"name": "xlz_key_001_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_002.png",
+			"type": "image",
+			"name": "xlz_key_002_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_003.png",
+			"type": "image",
+			"name": "xlz_key_003_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_004.png",
+			"type": "image",
+			"name": "xlz_key_004_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_005.png",
+			"type": "image",
+			"name": "xlz_key_005_png"
+		},
+		{
+			"url": "assets/image/xlz_key/xlz_key_006.png",
+			"type": "image",
+			"name": "xlz_key_006_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_001.png",
+			"type": "image",
+			"name": "xlz_unlock_001_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_002.png",
+			"type": "image",
+			"name": "xlz_unlock_002_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_003.png",
+			"type": "image",
+			"name": "xlz_unlock_003_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_004.png",
+			"type": "image",
+			"name": "xlz_unlock_004_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_005.png",
+			"type": "image",
+			"name": "xlz_unlock_005_png"
+		},
+		{
+			"url": "assets/image/xlz_unlock/xlz_unlock_006.png",
+			"type": "image",
+			"name": "xlz_unlock_006_png"
+		},
+		{
+			"url": "assets/image/streamer.json",
+			"type": "json",
+			"name": "streamer_json"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "config/gameConfig.json",
+			"type": "json",
+			"name": "gameConfig_json"
+		}
+	]
+}

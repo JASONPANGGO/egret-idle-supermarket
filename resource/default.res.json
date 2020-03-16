@@ -1,0 +1,215 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,gameConfig_json,bm_bgm2_mp3,gameConfig2_json,bm_bgm3_mp3,description2_json,gameConfig3_json,ending_1_png,ending_2_png,blogo_png,ebg_jpg,lang_ebtn_install_png,lang_guide_png,lang_pbtn_install_png,pbase_png,pbg_jpg,pbgup_png,pboard_1_png,pboard_2_png,pboard_3_png,pboard_4_png,pboard_5_png,phand_png,smbuilding_mp3,smselect_mp3,bakery_ske_json,bakery_tex_json,bakery_tex_png,clothing_ske_json,clothing_tex_json,clothing_tex_png,fish_ske_json,fish_tex_json,fish_tex_png,fruit_ske_json,fruit_tex_json,fruit_tex_png,pork_ske_json,pork_tex_json,pork_tex_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/sound/bm_bgm.mp3",
+			"type": "sound",
+			"name": "bm_bgm_mp3"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "config/gameConfig.json",
+			"type": "json",
+			"name": "gameConfig_json"
+		},
+		{
+			"name": "bm_bgm2_mp3",
+			"type": "sound",
+			"url": "assets/sound/bm_bgm.mp3"
+		},
+		{
+			"name": "gameConfig2_json",
+			"type": "json",
+			"url": "config/gameConfig.json"
+		},
+		{
+			"name": "bm_bgm3_mp3",
+			"type": "sound",
+			"url": "assets/sound/bm_bgm.mp3"
+		},
+		{
+			"name": "description2_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "gameConfig3_json",
+			"type": "json",
+			"url": "config/gameConfig.json"
+		},
+		{
+			"name": "ending_1_png",
+			"type": "image",
+			"url": "assets/image/ending/ending_1.png"
+		},
+		{
+			"name": "ending_2_png",
+			"type": "image",
+			"url": "assets/image/ending/ending_2.png"
+		},
+		{
+			"name": "blogo_png",
+			"type": "image",
+			"url": "assets/image/blogo.png"
+		},
+		{
+			"name": "ebg_jpg",
+			"type": "image",
+			"url": "assets/image/ebg.jpg"
+		},
+		{
+			"name": "lang_ebtn_install_png",
+			"type": "image",
+			"url": "assets/image/lang_ebtn_install.png"
+		},
+		{
+			"name": "lang_guide_png",
+			"type": "image",
+			"url": "assets/image/lang_guide.png"
+		},
+		{
+			"name": "lang_pbtn_install_png",
+			"type": "image",
+			"url": "assets/image/lang_pbtn_install.png"
+		},
+		{
+			"name": "pbase_png",
+			"type": "image",
+			"url": "assets/image/pbase.png"
+		},
+		{
+			"name": "pbg_jpg",
+			"type": "image",
+			"url": "assets/image/pbg.jpg"
+		},
+		{
+			"name": "pbgup_png",
+			"type": "image",
+			"url": "assets/image/pbgup.png"
+		},
+		{
+			"name": "pboard_1_png",
+			"type": "image",
+			"url": "assets/image/pboard_1.png"
+		},
+		{
+			"name": "pboard_2_png",
+			"type": "image",
+			"url": "assets/image/pboard_2.png"
+		},
+		{
+			"name": "pboard_3_png",
+			"type": "image",
+			"url": "assets/image/pboard_3.png"
+		},
+		{
+			"name": "pboard_4_png",
+			"type": "image",
+			"url": "assets/image/pboard_4.png"
+		},
+		{
+			"name": "pboard_5_png",
+			"type": "image",
+			"url": "assets/image/pboard_5.png"
+		},
+		{
+			"name": "phand_png",
+			"type": "image",
+			"url": "assets/image/phand.png"
+		},
+		{
+			"name": "smbuilding_mp3",
+			"type": "sound",
+			"url": "assets/sound/smbuilding.mp3"
+		},
+		{
+			"name": "smselect_mp3",
+			"type": "sound",
+			"url": "assets/sound/smselect.mp3"
+		},
+		{
+			"name": "bakery_ske_json",
+			"type": "json",
+			"url": "assets/image/bakery_ske.json"
+		},
+		{
+			"name": "bakery_tex_json",
+			"type": "json",
+			"url": "assets/image/bakery_tex.json"
+		},
+		{
+			"name": "bakery_tex_png",
+			"type": "image",
+			"url": "assets/image/bakery_tex.png"
+		},
+		{
+			"name": "clothing_ske_json",
+			"type": "json",
+			"url": "assets/image/clothing_ske.json"
+		},
+		{
+			"name": "clothing_tex_json",
+			"type": "json",
+			"url": "assets/image/clothing_tex.json"
+		},
+		{
+			"name": "clothing_tex_png",
+			"type": "image",
+			"url": "assets/image/clothing_tex.png"
+		},
+		{
+			"name": "fish_ske_json",
+			"type": "json",
+			"url": "assets/image/fish_ske.json"
+		},
+		{
+			"name": "fish_tex_json",
+			"type": "json",
+			"url": "assets/image/fish_tex.json"
+		},
+		{
+			"name": "fish_tex_png",
+			"type": "image",
+			"url": "assets/image/fish_tex.png"
+		},
+		{
+			"name": "fruit_ske_json",
+			"type": "json",
+			"url": "assets/image/fruit_ske.json"
+		},
+		{
+			"name": "fruit_tex_json",
+			"type": "json",
+			"url": "assets/image/fruit_tex.json"
+		},
+		{
+			"name": "fruit_tex_png",
+			"type": "image",
+			"url": "assets/image/fruit_tex.png"
+		},
+		{
+			"name": "pork_ske_json",
+			"type": "json",
+			"url": "assets/image/pork_ske.json"
+		},
+		{
+			"name": "pork_tex_json",
+			"type": "json",
+			"url": "assets/image/pork_tex.json"
+		},
+		{
+			"name": "pork_tex_png",
+			"type": "image",
+			"url": "assets/image/pork_tex.png"
+		}
+	]
+}

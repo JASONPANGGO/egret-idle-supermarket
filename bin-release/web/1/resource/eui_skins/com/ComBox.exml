@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBox" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*">
+	<e:Group id="con" width="138" height="137">
+		<e:Image id="bottomLayer" source="box2_lv2_jpg"/>
+		<e:Image id="topLayer" source="box1_lv2_jpg" y="0"/>
+	</e:Group>
+</e:Skin>

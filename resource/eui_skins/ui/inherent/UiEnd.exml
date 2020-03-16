@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.UiEnd" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
+        xmlns:ns1="*" xmlns:com="com.*" xmlns:tween="egret.tween.*" width="750">
+	<e:Group id="bgCon" x="-292" y="0">
+		<e:Image id="bg" source="ebg_jpg" x="0" y="0"/>
+		<com:ComMovieClip id="bg_mc" horizontalCenter="0" y="1334"/>
+	</e:Group>
+
+	<!--<w:Declarations>
+	<tween:TweenGroup id="cool">
+		<tween:TweenItem target="{con_cool_0}">
+			<tween:Set>
+				<tween:props>
+					<e:Object x="{0}" />
+				</tween:props>
+			</tween:Set>
+			<tween:To duration="10000">
+				<tween:props>
+					<e:Object x="{-1334}" />
+				</tween:props>
+			</tween:To>
+		</tween:TweenItem>
+		<tween:TweenItem target="{con_cool_1}">
+			<tween:Set>
+				<tween:props>
+					<e:Object x="{1334}" />
+				</tween:props>
+			</tween:Set>
+			<tween:To duration="10000">
+				<tween:props>
+					<e:Object x="{0}" />
+				</tween:props>
+			</tween:To>
+		</tween:TweenItem>
+	</tween:TweenGroup>
+</w:Declarations>
+-->
+<!--<e:Image id="bg" source="e_bg_jpg" fillMode="repeat" x="0" y="0" height="100%" width="100%" />
+-->
+<!--<e:Rect id="black" left="0" top="0" right="0" bottom="0" fillAlpha="0.5" visible="false" />
+<e:Group id="conBg" width="1334" height="1334" horizontalCenter="0" bottom="0">
+	<e:Image id="bg" source="ebg_jpg" />
+	<e:Image source="ending_1_png" visible="false" />
+	<com:ComMovieClip id="mcBg" width="1334" height="1334" />
+</e:Group>
+<e:Group id="conLogo" top="10%" horizontalCenter="0">
+	<e:Image id="logo" source="blogo_png" x="0" y="0" />
+</e:Group>
+<e:Group id="conBtn" horizontalCenter="0" bottom="38%">
+	<e:Image id="replay" x="241" y="60" source="" />
+	<e:Image id="btn" x="200.5" anchorOffsetX="200.5" anchorOffsetY="79.5" y="79.5" source="lang_ebtn_install_png" />
+</e:Group>
+-->
+</e:Skin>

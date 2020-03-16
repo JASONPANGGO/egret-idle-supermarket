@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComItem" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*" width="161" height="161">
+	<e:Group id="con" width="161" height="161" y="24.75" x="80.5" anchorOffsetX="80.5" anchorOffsetY="24.75">
+		<e:Image source="pBottomPhoto_png"/>
+		<e:Image id="item" source="pBottomPhoto2_png"/>
+	</e:Group>
+</e:Skin>

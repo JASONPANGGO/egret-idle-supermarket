@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBtn" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="con" width="370" height="99">
+		<e:Image id="btn" y="49.5" anchorOffsetX="185" anchorOffsetY="49.5" x="185" source="ctat_store_png" />
+		<e:Image id="loupe" y="24" anchorOffsetX="40" anchorOffsetY="40" x="334" source="pCtaMagnifier_png" />
+		<e:Image id="pos0" y="24" x="334" source=""  visible="false"/>
+		<e:Image id="pos1" y="60" x="360" source=""  visible="false"/>
+		<e:Image id="pos2" y="74" x="308" source=""  visible="false"/>
+	</e:Group>
+</e:Skin>

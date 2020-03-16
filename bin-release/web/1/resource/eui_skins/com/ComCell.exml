@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComCell" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" width="80" height="80">
+	<e:Group id="con" anchorOffsetX="25" anchorOffsetY="25" width="50" height="50" x="40" y="40">
+		<e:Image id="item" anchorOffsetX="25" anchorOffsetY="24"  source="pBallRed_png" x="25" y="25"/>
+	</e:Group>
+</e:Skin>

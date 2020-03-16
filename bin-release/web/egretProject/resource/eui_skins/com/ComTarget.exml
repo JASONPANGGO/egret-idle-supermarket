@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComTarget" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*" xmlns:tween="egret.tween.*">
+	<e:Group id="con" width="357" height="460">
+		<e:Image id="bg" source="lang_ppic_png" />
+		<e:Group id="conTime" x="33" width="292" height="77" bottom="0">
+			<e:Image id="bgTime" source="lang_ptime_png" y="0" x="0" />
+			<e:Label id="time" text="00:00" textColor="0x000000" size="46" verticalCenter="0" anchorOffsetX="59"
+			         anchorOffsetY="23" horizontalCenter="64" fontFamily="Arial" bold="true" />
+		</e:Group>
+	</e:Group>
+</e:Skin>

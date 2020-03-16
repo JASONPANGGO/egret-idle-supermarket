@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComCar" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*" width="60" height="47">
+	<e:Group id="con" x="30" y="23.5" anchorOffsetX="30" anchorOffsetY="23.5" width="60" height="47">
+		<e:Image id="car"  source="car1_0_ui_png" y="23.5" width="60" height="47" x="30" anchorOffsetX="30" anchorOffsetY="23.5"/>
+	</e:Group>
+</e:Skin>

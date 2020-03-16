@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComDoor" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*">
+	<e:Group id="con" x="0" y="0" width="134" height="240">
+		<com:ComNpc id="comNpc" skinName="ComNpc" y="244" x="67.5" anchorOffsetX="69.5" anchorOffsetY="214"/>
+		<e:Image source="pdoor1_png" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image id="door" source="pdoor2_png" x="0" y="0" scaleX="1" scaleY="1"/>
+	</e:Group>
+</e:Skin>

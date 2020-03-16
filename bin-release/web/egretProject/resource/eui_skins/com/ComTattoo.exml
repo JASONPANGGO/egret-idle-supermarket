@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComTattoo" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*" xmlns:tween="egret.tween.*">
+	<e:Group id="con" width="267" height="324">
+		<e:Image id="tattooDebug" source="xlz_machine_001_png" y="80" />
+		<com:ComMovieClip id="tattoo" width="267" height="244" y="80" />
+		<e:Group id="conCD" horizontalCenter="0" y="0">
+			<e:Image id="blitz" source="ui6_lightning_png" x="0" y="0" />
+			<e:Image source="lang_machine_png" x="43" y="6.5" />
+			<e:ProgressBar id="comBar" x="43" y="56.5" skinName="ComBar" value="100" />
+		</e:Group>
+	</e:Group>
+</e:Skin>

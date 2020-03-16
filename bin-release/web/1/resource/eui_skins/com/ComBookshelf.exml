@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComBookshelf" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*">
+	<e:Group id="con" x="0" y="0" width="312" height="522">
+		<e:Image y="92" source="pLv3bookcase_png" x="40" />
+		<e:Image id="photo" source="pLv3store1_png" x="110" y="0" />
+		<e:Image id="sexyBook" x="126" y="126" source="pLv3SexyBook_png"/>
+		<item:ItemImgBase id="lv0" x="64" y="130" source="pLvBook1_png" />
+		<item:ItemImgBase id="lv1" x="62" y="244" source="pLv3Book2_png" />
+		<item:ItemImgBase id="lv2" x="60" y="345" source="pLv3Book3_png" />
+		<e:Image id="book0" y="308" x="0" source="pLvBookOut1_png" visible="false" />
+		<e:Image y="330" id="book1" x="227" source="pLvBookOut2_png" visible="false" />
+		<e:Image y="350" id="book2" x="126" source="pLv3BookOut3_png" visible="false" />
+	</e:Group>
+</e:Skin>

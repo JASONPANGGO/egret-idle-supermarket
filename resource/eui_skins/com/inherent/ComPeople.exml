@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComPeople" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*">
+	<e:Group id="con" x="11" y="37" width="22" height="37" anchorOffsetX="11" anchorOffsetY="37">
+		<!--<com:ComMovieClip id="people" width="101" height="197" />
+		-->
+		<!--<e:Image id="peopleDebug" source="people1_0_ui_png" x="11" y="37" anchorOffsetX="11" anchorOffsetY="37" />
+		<e:Image id="peopleDieDebug" source="people1_1_ui_png" x="11" y="37" anchorOffsetX="11" anchorOffsetY="37" />
+		-->
+		<e:Image id="people" source="people1_0_ui_png" x="11" y="37" anchorOffsetX="11" anchorOffsetY="37" />
+		<!--<e:Image id="peopleWalkDebug" source="xlz_run_01_png" x="0" y="0" />
+		<e:Group id="conParticles" y="120" width="101" height="60" />
+		<e:Image id="warn" x="32" y="32" source="pScared_png" anchorOffsetX="51" anchorOffsetY="46" visible="false" />
+		-->
+	</e:Group>
+</e:Skin>

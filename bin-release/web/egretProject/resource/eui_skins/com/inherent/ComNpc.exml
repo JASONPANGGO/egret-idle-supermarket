@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.ComNpc" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
+        xmlns:item="item.*">
+	<e:Group id="con" x="0" y="0" width="139" height="214">
+		<com:ComMovieClip id="npc" width="139" height="214"/>
+		<e:Image id="npcDebug" x="0" y="0" source="xlz_idle_01_png"/>
+		<e:Image id="npcDieDebug" y="-53" x="-91" source="xlz_bf_06_png"/>
+		<e:Group id="conParticles" y="160" width="101" height="60"  x="60"/>
+	</e:Group>
+</e:Skin>
