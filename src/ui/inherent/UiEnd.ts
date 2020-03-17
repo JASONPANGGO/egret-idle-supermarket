@@ -16,11 +16,18 @@ namespace ui {
 		// public btn: eui.Image;
 
 		// public conBody: eui.Group;
-		public bg_mc_con: eui.Group;
+		public bgCon: eui.Group;
+
+
 		public bg_mc: com.ComMovieClip;
 
 		public bg: eui.Image;
+		public btnCon: eui.Group;
 		public btn: eui.Image;
+		public logo: eui.Image;
+
+
+
 
 
 		// public conParticles_0: eui.Group;
@@ -137,26 +144,15 @@ namespace ui {
 
 			const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
 
-			this.bg_mc_con.bottom = 0
 
-			// const conLogo = this.conLogo;
-			// const conBtn = this.conBtn;
-			// const conBg = this.conBg;
-
-			// conLogo.scaleX = conLogo.scaleY = baseScale;
-			// conBtn.scaleX = conBtn.scaleY = baseScale;
-
-			// conBg.scaleX = conBg.scaleY = Math.max(this.width / conBg.width, this.height / conBg.height);
-			// conBg.width = this.width;
-			// conBg.height = this.height;
+			this.bgCon.scaleX = this.bgCon.scaleY = Math.max(this.width / this.bg.width, this.height / this.bg.height);
 
 			if (this.screenType == gConst.screenType.VERTICAL) {
 				//竖屏
-				// this.con_logo.y = Math.floor(this.height * .02);
-				// this.con_title.y = Math.floor(this.height * .35);
-				// this.con.y = Math.floor(this.height * .6);
-				this.bg.scaleX = this.bg.scaleY = Math.max(this.width / this.bg.width, this.height / this.bg.height);
 
+				this.logo.y = 0.15 * this.height
+				this.btnCon.y = this.logo.y + this.logo.height + 30
+				this.btnCon.bottom = NaN
 
 				switch (this.mobileType) {
 					//iPhoneX或以上
@@ -171,8 +167,10 @@ namespace ui {
 				}
 			} else {
 				//横屏
-				// this.con.x = Math.floor(this.width * .75);
-				// conLogo.x = conBtn.x = Math.floor(this.width * .75);
+
+				this.logo.y = 20
+				this.btnCon.y = NaN
+				this.btnCon.bottom = 20
 
 				switch (this.mobileType) {
 					//iPhoneX或以上
@@ -187,9 +185,7 @@ namespace ui {
 				}
 			}
 
-
-			// this.con_logo.scaleX = this.con_logo.scaleY =
-			// this.con.scaleX = this.con.scaleY = baseScale;
+			this.logo.scaleX = this.logo.scaleY = this.btnCon.scaleX = this.btnCon.scaleY = baseScale
 		}
 
 		/** 屏幕横竖屏转换时调用 */
@@ -199,8 +195,10 @@ namespace ui {
 
 			if (this.screenType == gConst.screenType.VERTICAL) {
 				//竖屏
+				// this.bgCon.bottom = NaN
 			} else {
 				//横屏
+				// this.bgCon.bottom = 0
 			}
 		}
 		/* =========== 框架结构代码-end =========== */
@@ -456,7 +454,7 @@ namespace ui {
 		}
 
 		/** 其它元素展示 */
-	public showOther() {
+		public showOther() {
 			// gSoundMgr.changeBg("bm_ending");
 			// gSoundMgr.playEff("smsuccess");
 			this.gameEnd();

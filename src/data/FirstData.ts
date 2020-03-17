@@ -29,7 +29,7 @@ namespace data {
 			this.horizontal = { x: 0, y: 0 }; //横屏位置
 			this.vertical = { x: 0, y: 0 }; //竖屏位置
 
-			this.topSpace = .1; //上间距
+			this.topSpace = 0.05; //上间距
 			this.rightSpace = 25; //右间距
 			this.bottomSpace = 20; //下间距
 			this.leftSpace = .005; //左间距

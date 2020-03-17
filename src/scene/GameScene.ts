@@ -210,15 +210,6 @@ namespace scene {
 			const con = this.con;
 
 			let cameraOffsetY: number
-			// const hand = this.hand;
-
-			// con.width = this.width;
-			// con.height = this.height;
-
-			// conBg.width = this.width;
-			// conBg.height = this.height;
-
-			// hand.scaleX = hand.scaleY = baseScale;
 
 			if (GameMgr.screenType == gConst.screenType.VERTICAL) {
 				//竖屏
@@ -658,24 +649,14 @@ namespace scene {
 				this.pboard_con.$children.forEach(child => {
 					const board = child.$children[0]
 					if (board.name === boardName) {
-						// gComMgr.clickAim(board, gConst.clkAimType.SCALE);
-						// egret.setTimeout(gComMgr.clickAim, gComMgr, 500, board, gConst.clkAimType.HIDE);
-
-						// egret.setTimeout(() => {
-						// 	if (this.currentHousePoint < 3) {
-						// 		this.currentHousePoint++
-						// 		this.moveToNextHouse()
-						// 	} else {
-						// 		this.openEnd()
-						// 	}
-						// }, this, 1500)
+						gSoundMgr.playEff('smbuilding')
 						gTween.toScale(board, 0.8, 200, 1, void 0, void 0, {
 							callback: () => {
+								this.buildHouse(boardName)
 								gTween.toScale(board, 1, 200, 0.8, void 0, { duration: 200 }, {
 									callback: () => {
 										board.alpha = 1
 										// 建造房子
-										this.buildHouse(boardName)
 										gTween.fadeOut(board, 300, 1, void 0, void 0, {
 											callback: () => {
 												board.alpha = 1
@@ -687,7 +668,7 @@ namespace scene {
 													} else {
 														this.openEnd()
 													}
-												}, this, 1000)
+												}, this, 1200)
 											}
 										})
 									}
@@ -711,7 +692,7 @@ namespace scene {
 		}
 
 		private buildHouse(boardName: string) {
-			gSoundMgr.playEff('smbuilding')
+
 			const currentHousePoint = this['housepoint_' + this.currentHousePoint]
 			gTween.fadeOut(currentHousePoint, 300)
 			const currentHousePoint_con = this['housepoint_' + this.currentHousePoint + '_con']
@@ -1044,8 +1025,10 @@ namespace scene {
 			this.UiEnd.hide();
 			this.UiEnd.open();
 			gTween.fadeIn(this.UiEnd, 300, 1)
-			gTween.fadeOut(this.conBg, 300, 1)
-			gTween.fadeOut(this.con, 300, 1)
+			// gTween.fadeOut(this.conBg, 300, 1)
+			// gTween.fadeOut(this.con, 300, 1)
+			this.conBg.visible = false
+			this.con.visible = false
 
 			// egret.setTimeout(this.showEnd, this, 500);
 

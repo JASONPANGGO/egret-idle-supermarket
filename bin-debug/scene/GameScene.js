@@ -162,12 +162,6 @@ var scene;
             var conBg = this.conBg;
             var con = this.con;
             var cameraOffsetY;
-            // const hand = this.hand;
-            // con.width = this.width;
-            // con.height = this.height;
-            // conBg.width = this.width;
-            // conBg.height = this.height;
-            // hand.scaleX = hand.scaleY = baseScale;
             if (GameMgr.screenType == 1 /* VERTICAL */) {
                 //竖屏
                 // con.width = gConst.screen.WIDTH;
@@ -550,23 +544,14 @@ var scene;
                 this.pboard_con.$children.forEach(function (child) {
                     var board = child.$children[0];
                     if (board.name === boardName_1) {
-                        // gComMgr.clickAim(board, gConst.clkAimType.SCALE);
-                        // egret.setTimeout(gComMgr.clickAim, gComMgr, 500, board, gConst.clkAimType.HIDE);
-                        // egret.setTimeout(() => {
-                        // 	if (this.currentHousePoint < 3) {
-                        // 		this.currentHousePoint++
-                        // 		this.moveToNextHouse()
-                        // 	} else {
-                        // 		this.openEnd()
-                        // 	}
-                        // }, this, 1500)
+                        gSoundMgr.playEff('smbuilding');
                         gTween.toScale(board, 0.8, 200, 1, void 0, void 0, {
                             callback: function () {
+                                _this.buildHouse(boardName_1);
                                 gTween.toScale(board, 1, 200, 0.8, void 0, { duration: 200 }, {
                                     callback: function () {
                                         board.alpha = 1;
                                         // 建造房子
-                                        _this.buildHouse(boardName_1);
                                         gTween.fadeOut(board, 300, 1, void 0, void 0, {
                                             callback: function () {
                                                 board.alpha = 1;
@@ -579,7 +564,7 @@ var scene;
                                                     else {
                                                         _this.openEnd();
                                                     }
-                                                }, _this, 1000);
+                                                }, _this, 1200);
                                             }
                                         });
                                     }
@@ -602,7 +587,6 @@ var scene;
             });
         };
         GameScene.prototype.buildHouse = function (boardName) {
-            gSoundMgr.playEff('smbuilding');
             var currentHousePoint = this['housepoint_' + this.currentHousePoint];
             gTween.fadeOut(currentHousePoint, 300);
             var currentHousePoint_con = this['housepoint_' + this.currentHousePoint + '_con'];
@@ -858,8 +842,10 @@ var scene;
             this.UiEnd.hide();
             this.UiEnd.open();
             gTween.fadeIn(this.UiEnd, 300, 1);
-            gTween.fadeOut(this.conBg, 300, 1);
-            gTween.fadeOut(this.con, 300, 1);
+            // gTween.fadeOut(this.conBg, 300, 1)
+            // gTween.fadeOut(this.con, 300, 1)
+            this.conBg.visible = false;
+            this.con.visible = false;
             // egret.setTimeout(this.showEnd, this, 500);
             // GameMgr.endType = gConst.endType.VICTORY;
             // this.showHead();

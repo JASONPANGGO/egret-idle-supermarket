@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="skins.UiEnd" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing"
         xmlns:ns1="*" xmlns:com="com.*" xmlns:tween="egret.tween.*" width="750">
-	<e:Group id="bgCon" y="0" horizontalCenter="0">
-		<e:Image id="bg" source="ebg_jpg" x="0" y="0"/>
-		<e:Group id="bg_mc_con" x="0" y="0">
-			<com:ComMovieClip id="bg_mc" y="10" x="10"/>
-		</e:Group>
-		<e:Image source="blogo_png" y="163.73" horizontalCenter="0"/>
-		<e:Image id="btn" source="lang_ebtn_install_png" horizontalCenter="0.5" verticalCenter="79.5"/>
+	<e:Group id="bgCon" width="1334" height="1334" horizontalCenter="0" scaleX="1" bottom="0">
+		<e:Image id="bg" source="ebg_jpg" width="1334" height="1334" x="0" y="0"/>
+		<com:ComMovieClip id="bg_mc" width="1334" height="1334" x="0" y="0"/>
+
+
+
+	</e:Group>
+	<e:Image id="logo" source="blogo_png" horizontalCenter="0" y="120"/>
+	<e:Group id="btnCon" horizontalCenter="0" y="588">
+		<e:Image id="btn" source="lang_ebtn_install_png" y="79.5" horizontalCenter="0" anchorOffsetX="200.5" anchorOffsetY="79.5"/>
 	</e:Group>
 
 	<!--<w:Declarations>

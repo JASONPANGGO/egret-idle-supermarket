@@ -104,21 +104,12 @@ var ui;
         UiEnd.prototype.resizeView = function () {
             // console.info("resizeView", this.width, this.height);
             var baseScale = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
-            this.bg_mc_con.bottom = 0;
-            // const conLogo = this.conLogo;
-            // const conBtn = this.conBtn;
-            // const conBg = this.conBg;
-            // conLogo.scaleX = conLogo.scaleY = baseScale;
-            // conBtn.scaleX = conBtn.scaleY = baseScale;
-            // conBg.scaleX = conBg.scaleY = Math.max(this.width / conBg.width, this.height / conBg.height);
-            // conBg.width = this.width;
-            // conBg.height = this.height;
+            this.bgCon.scaleX = this.bgCon.scaleY = Math.max(this.width / this.bg.width, this.height / this.bg.height);
             if (this.screenType == 1 /* VERTICAL */) {
                 //竖屏
-                // this.con_logo.y = Math.floor(this.height * .02);
-                // this.con_title.y = Math.floor(this.height * .35);
-                // this.con.y = Math.floor(this.height * .6);
-                this.bg.scaleX = this.bg.scaleY = Math.max(this.width / this.bg.width, this.height / this.bg.height);
+                this.logo.y = 0.15 * this.height;
+                this.btnCon.y = this.logo.y + this.logo.height + 30;
+                this.btnCon.bottom = NaN;
                 switch (this.mobileType) {
                     //iPhoneX或以上
                     case 1 /* IPHONE_X */:
@@ -133,8 +124,9 @@ var ui;
             }
             else {
                 //横屏
-                // this.con.x = Math.floor(this.width * .75);
-                // conLogo.x = conBtn.x = Math.floor(this.width * .75);
+                this.logo.y = 20;
+                this.btnCon.y = NaN;
+                this.btnCon.bottom = 20;
                 switch (this.mobileType) {
                     //iPhoneX或以上
                     case 1 /* IPHONE_X */:
@@ -147,8 +139,7 @@ var ui;
                         break;
                 }
             }
-            // this.con_logo.scaleX = this.con_logo.scaleY =
-            // this.con.scaleX = this.con.scaleY = baseScale;
+            this.logo.scaleX = this.logo.scaleY = this.btnCon.scaleX = this.btnCon.scaleY = baseScale;
         };
         /** 屏幕横竖屏转换时调用 */
         UiEnd.prototype.rotateView = function () {
