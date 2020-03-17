@@ -287,17 +287,17 @@ var com;
                 return;
             }
             this.parent.addChild(this.armatureDisplay);
-            if (this.waitScale) {
-                this.setScale(this.waitScale.x, this.waitScale.y);
-            }
+            // if (this.waitScale) {
+            // 	this.setScale(this.waitScale.x, this.waitScale.y);
+            // }
             if (!this.waitPos) {
                 this.setPos({ x: this.parent.width / 2, y: this.parent.height / 2 });
             }
             else {
                 this.setPos(this.waitPos);
             }
-            this.setIndex(this.waitIndex);
-            this.setAlpha(this.orgAlpha || this.armatureDisplay.alpha);
+            // this.setIndex(this.waitIndex);
+            // this.setAlpha(this.orgAlpha || this.armatureDisplay.alpha);
             this.show();
             return true;
         };

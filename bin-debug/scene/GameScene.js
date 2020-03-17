@@ -520,21 +520,18 @@ var scene;
                     boardContainer.addChild(board);
                     gComMgr.setItemAnchor(board);
                     _this.pboard_con.addChild(boardContainer);
-                    gTween.toBigShow(board, 500, 1, 1, egret.Ease.backOut, void 0, {
-                        callback: function () {
-                            _this.pboard_con.addEventListener(egret.TouchEvent.TOUCH_TAP, _this.checkSelect, _this);
-                        }
-                    });
+                    board.visible = false;
+                    gTween.toBigShow(board, 500, 1, 1, egret.Ease.backOut);
                 }
             });
-            gTween.toTopShow(this.con_guide, 300, 30, void 0, 1, egret.Ease.backOut);
+            this.pboard_con.addEventListener(egret.TouchEvent.TOUCH_TAP, this.checkSelect, this);
+            gTween.toTopShow(this.con_guide, 300, 30, void 0, 1);
             this.showGuide();
         };
         GameScene.prototype.findBoard = function (name) {
             for (var i = 0; i < this.selectionItems.length; i++) {
                 if (this.selectionItems[i].name === name) {
                     this.selectionItems.splice(i, 1);
-                    return this.selectionItems[i].id;
                 }
             }
         };
@@ -543,22 +540,37 @@ var scene;
             if (event.type === egret.TouchEvent.TOUCH_TAP) {
                 if (!event.target.name)
                     return;
+                console.log(event.target.name);
                 this.pboard_con.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.checkSelect, this);
                 var boardName_1 = event.target.name;
-                var boardId = this.findBoard(boardName_1);
-                this.buildHouse(boardName_1);
+                this.findBoard(boardName_1);
+                gSoundMgr.playEff('smselect');
                 this.hideGuide();
                 gTween.toBottomHide(this.con_guide, 300, 30, void 0, 1, egret.Ease.backOut);
-                this.con_guide;
                 this.pboard_con.$children.forEach(function (child) {
                     var board = child.$children[0];
                     if (board.name === boardName_1) {
+                        // gComMgr.clickAim(board, gConst.clkAimType.SCALE);
+                        // egret.setTimeout(gComMgr.clickAim, gComMgr, 500, board, gConst.clkAimType.HIDE);
+                        // egret.setTimeout(() => {
+                        // 	if (this.currentHousePoint < 3) {
+                        // 		this.currentHousePoint++
+                        // 		this.moveToNextHouse()
+                        // 	} else {
+                        // 		this.openEnd()
+                        // 	}
+                        // }, this, 1500)
                         gTween.toScale(board, 0.8, 200, 1, void 0, void 0, {
                             callback: function () {
                                 gTween.toScale(board, 1, 200, 0.8, void 0, { duration: 200 }, {
                                     callback: function () {
+                                        board.alpha = 1;
+                                        // 建造房子
+                                        _this.buildHouse(boardName_1);
                                         gTween.fadeOut(board, 300, 1, void 0, void 0, {
                                             callback: function () {
+                                                board.alpha = 1;
+                                                board.visible = false;
                                                 egret.setTimeout(function () {
                                                     if (_this.currentHousePoint < 3) {
                                                         _this.currentHousePoint++;
@@ -576,7 +588,7 @@ var scene;
                         });
                     }
                     else {
-                        gTween.fadeOut(board, 300);
+                        gTween.fadeOut(board, 300, 1);
                     }
                 });
             }
@@ -590,11 +602,12 @@ var scene;
             });
         };
         GameScene.prototype.buildHouse = function (boardName) {
+            gSoundMgr.playEff('smbuilding');
             var currentHousePoint = this['housepoint_' + this.currentHousePoint];
-            currentHousePoint.visible = false;
+            gTween.fadeOut(currentHousePoint, 300);
+            var currentHousePoint_con = this['housepoint_' + this.currentHousePoint + '_con'];
             var bone = new com.ComBones();
-            bone.setData(this.conBg, boardName);
-            bone.setPos({ x: currentHousePoint.x, y: currentHousePoint.y });
+            bone.setData(currentHousePoint_con, boardName);
             bone.play('newAnimation');
         };
         GameScene.prototype.updateCamera = function (scene, target, scale, isAni) {
@@ -840,9 +853,13 @@ var scene;
             // GameMgr.stage.removeEventListener(egret.TouchEvent.TOUCH_TAP, Mapi.install, Mapi);
             // this.closePeople();
             // this.closeStart();
+            this.UiFirst.close();
             this.UiEnd = gUiMgr.create(ui.UiEnd);
             this.UiEnd.hide();
             this.UiEnd.open();
+            gTween.fadeIn(this.UiEnd, 300, 1);
+            gTween.fadeOut(this.conBg, 300, 1);
+            gTween.fadeOut(this.con, 300, 1);
             // egret.setTimeout(this.showEnd, this, 500);
             // GameMgr.endType = gConst.endType.VICTORY;
             // this.showHead();

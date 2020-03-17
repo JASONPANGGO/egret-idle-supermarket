@@ -15,7 +15,7 @@ var data;
             this.vertical = { x: 0, y: 0 }; //竖屏位置
             this.topSpace = .1; //上间距
             this.rightSpace = 25; //右间距
-            this.bottomSpace = .1; //下间距
+            this.bottomSpace = 20; //下间距
             this.leftSpace = .005; //左间距
             this.horRatio = 20; //横屏占比(%) (有赋值时使用占比适配)
             this.verRatio = null; //竖屏占比(%) (有赋值时使用占比适配)

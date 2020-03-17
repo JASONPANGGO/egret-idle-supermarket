@@ -16,10 +16,11 @@ namespace ui {
 		// public btn: eui.Image;
 
 		// public conBody: eui.Group;
-
+		public bg_mc_con: eui.Group;
 		public bg_mc: com.ComMovieClip;
 
 		public bg: eui.Image;
+		public btn: eui.Image;
 
 
 		// public conParticles_0: eui.Group;
@@ -84,7 +85,9 @@ namespace ui {
 
 			// 	this.btn.y = this.replay.y + this.replay.anchorOffsetY + space + this.btn.anchorOffsetY;
 			// }
+
 			this.playMC()
+			gTween.yoyoBtn(this.btn)
 		}
 
 		/** 每次结束界面都会调用 */
@@ -134,6 +137,8 @@ namespace ui {
 
 			const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
 
+			this.bg_mc_con.bottom = 0
+
 			// const conLogo = this.conLogo;
 			// const conBtn = this.conBtn;
 			// const conBg = this.conBg;
@@ -151,6 +156,7 @@ namespace ui {
 				// this.con_title.y = Math.floor(this.height * .35);
 				// this.con.y = Math.floor(this.height * .6);
 				this.bg.scaleX = this.bg.scaleY = Math.max(this.width / this.bg.width, this.height / this.bg.height);
+
 
 				switch (this.mobileType) {
 					//iPhoneX或以上
@@ -450,7 +456,7 @@ namespace ui {
 		}
 
 		/** 其它元素展示 */
-		public showOther() {
+	public showOther() {
 			// gSoundMgr.changeBg("bm_ending");
 			// gSoundMgr.playEff("smsuccess");
 			this.gameEnd();

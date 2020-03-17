@@ -67,6 +67,7 @@ var ui;
             // 	this.btn.y = this.replay.y + this.replay.anchorOffsetY + space + this.btn.anchorOffsetY;
             // }
             this.playMC();
+            gTween.yoyoBtn(this.btn);
         };
         /** 每次结束界面都会调用 */
         UiEnd.prototype.stop = function () {
@@ -103,6 +104,7 @@ var ui;
         UiEnd.prototype.resizeView = function () {
             // console.info("resizeView", this.width, this.height);
             var baseScale = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
+            this.bg_mc_con.bottom = 0;
             // const conLogo = this.conLogo;
             // const conBtn = this.conBtn;
             // const conBg = this.conBg;
