@@ -8,13 +8,13 @@ namespace scene {
 		public con: eui.Group;
 
 		private UiFirst: ui.UiFirst;
-		private UiStart: ui.UiStart;
-		private UiTran: ui.UiTran;
-		private UiTranEnd: ui.UiTranEnd;
+		// private UiStart: ui.UiStart;
+		// private UiTran: ui.UiTran;
+		// private UiTranEnd: ui.UiTranEnd;
 		private UiEnd: ui.UiEnd;
-		private UiEndFail: ui.UiEndFail;
-		private UiChat: ui.UiChat;
-		private UiCongrats: ui.UiCongrats;
+		// private UiEndFail: ui.UiEndFail;
+		// private UiChat: ui.UiChat;
+		// private UiCongrats: ui.UiCongrats;
 
 		public isLoadRes: boolean = null; //是否已loadRes()资源
 		public isFirstOpen: boolean = true; //是否第一次打开场景
@@ -202,7 +202,7 @@ namespace scene {
 		public resizeView(): void {
 			// console.info("resizeView", this.width, this.height, GameMgr.screenType, GameMgr.mobileType);
 			this.dispatchEventWith(gConst.eventType.RESIZE_VIEW);
-			this.updataParticlesEmitter();
+			// this.updataParticlesEmitter();
 
 			const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
 
@@ -321,27 +321,27 @@ namespace scene {
 			if (this.UiFirst) {
 				this.UiFirst.destroy();
 			}
-			if (this.UiStart) {
-				this.UiStart.destroy();
-			}
-			if (this.UiTran) {
-				this.UiTran.destroy();
-			}
-			if (this.UiTranEnd) {
-				this.UiTranEnd.destroy();
-			}
-			if (this.UiEnd) {
-				this.UiEnd.destroy();
-			}
-			if (this.UiEndFail) {
-				this.UiEndFail.destroy();
-			}
-			if (this.UiChat) {
-				this.UiChat.destroy();
-			}
-			if (this.UiCongrats) {
-				this.UiCongrats.destroy();
-			}
+			// if (this.UiStart) {
+			// 	this.UiStart.destroy();
+			// }
+			// if (this.UiTran) {
+			// 	this.UiTran.destroy();
+			// }
+			// if (this.UiTranEnd) {
+			// 	this.UiTranEnd.destroy();
+			// }
+			// if (this.UiEnd) {
+			// 	this.UiEnd.destroy();
+			// }
+			// if (this.UiEndFail) {
+			// 	this.UiEndFail.destroy();
+			// }
+			// if (this.UiChat) {
+			// 	this.UiChat.destroy();
+			// }
+			// if (this.UiCongrats) {
+			// 	this.UiCongrats.destroy();
+			// }
 			// if (this.UiPeople) {
 			// 	this.UiPeople.destroy();
 			// }
@@ -382,215 +382,6 @@ namespace scene {
 		}
 		/* =========== 框架结构代码-end =========== */
 
-		/* =========== 粒子代码-start =========== */
-		private particleMgr: util.ParticleMgr;
-
-		/**
-		 * 创建所有粒子
-		 * @param {egret.DisplayObjectContainer} parent 粒子父级
-		 * @param {string[]} resName 粒子资源名称组
-		 * @param {string} cfgName 粒子配置名称
-		 * @param {number} idx 粒子层级
-		 * @param {boolean} autoStart = true 粒子自动开始播放
-		 * @param {number} x = 0 粒子X坐标
-		 * @param {number} y = 0 粒子Y坐标
-		 * @returns {number} 当前粒子ID
-		 */
-		public createParticles(parent: egret.DisplayObjectContainer, resName: string[], cfgName: string, idx?: number, autoStart: boolean = true, x: number = 0, y: number = 0): number {
-			if (!this.particleMgr) {
-				this.particleMgr = new util.ParticleMgr(this);
-			}
-			return this.particleMgr.createParticles(parent, resName, cfgName, idx, autoStart, x, y);
-		}
-
-		/**
-		 * 获取粒子
-		 * @param {number} id 粒子ID
-		 */
-		public getParticle(id: number) {
-			if (!this.particleMgr) {
-				return;
-			}
-			return this.particleMgr.getParticle(id);
-		}
-
-		/**
-		 * 开始播放所有粒子
-		 * @param {number} duration 粒子出现总时间
-		 */
-		public startParticles(duration?: number) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.startParticles(duration);
-		}
-
-		/**
-		 * 开始播放粒子
-		 * @param {number} id 当前粒子ID
-		 * @param {number} duration 粒子出现总时间
-		 */
-		public startParticle(id: number | string, duration?: number) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.startParticle(id, duration);
-		}
-
-		/**
-		 * 停止创建所有粒子
-         * @param {boolean} clear 是否清除掉现有粒子
-		 */
-		public stopParticles(clear?: boolean) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.stopParticles(clear);
-		}
-
-		/**
-		 * 停止创建粒子
-		 * @param {number} id 当前粒子ID
-         * @param {boolean} clear 是否清除掉现有粒子
-		 */
-		public stopParticle(id: number | string, clear?: boolean) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.stopParticle(id, clear);
-		}
-
-		/**
-		 * 设置所有粒子层级
-		 */
-		public setParticlesIndex(idx: number) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.setParticlesIndex(idx);
-		}
-
-		/**
-		 * 更新所有粒子发射位置
-		 */
-		private updataParticlesEmitter() {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.updataParticlesEmitter();
-		}
-
-		/**
-		 * 设置所有粒子位置
-		 */
-		public setParticlesPos(x: number = 0, y: number = 0) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.setParticlesPos(x, y);
-		}
-
-		/**
-		 * 设置所有粒子系统最大粒子数，超过该数量将不会继续创建粒子，取值范围[1,Number.MAX_VALUE]
-		 * @param {number} id 当前粒子ID
-		 */
-		public setMaxParticles(id: number | string, max: number) {
-			if (!this.particleMgr) {
-				return;
-			}
-			this.particleMgr.setMaxParticles(id, max);
-		}
-		/* =========== 粒子代码-end =========== */
-
-		/* =========== 闪烁物代码-start =========== */
-		private starMgr: util.StarMgr;
-		/**
-		 * 显示闪烁物
-		 * @param {egret.DisplayObjectContainer} con 闪烁物容器
-		 * @param {string[]} starAnswers 闪烁物资源名称配置
-		 * @param {number} cfg.intervalMax 下次显示闪烁物，时间间隔范围，最大值
-		 * @param {number} cfg.intervalMin 下次显示闪烁物，时间间隔范围，最小值
-		 * @param {number} cfg.scaleMax 闪烁物缩放值范围，最大值
-		 * @param {number} cfg.scaleMin 闪烁物缩放值范围，最小值
-		 * @param {boolean} cfg.isRotate 闪烁物是否旋转
-		 * @param {boolean} cfg.isAdaptiveScale 闪烁物是否自适应父级缩放
-		 * @param {number} cfg.starMaxCnt 闪烁物是否自适应父级缩放
-		 */
-		public showStar(con: egret.DisplayObjectContainer, starAnswers?: string[], cfg?: { intervalMax?: number, intervalMin?: number, scaleMax?: number, scaleMin?: number, isRotate?: boolean, isAdaptiveScale?: boolean, starMaxCnt?: number }) {
-			if (!this.starMgr) {
-				this.starMgr = new util.StarMgr(con);
-			}
-			this.starMgr.show(starAnswers, cfg);
-		}
-
-		/**
-		 * 更新闪烁物数据
-		 * @param {string[]} starAnswers 闪烁物资源名称配置
-		 * @param {number} cfg.intervalMax 下次显示闪烁物，时间间隔范围，最大值
-		 * @param {number} cfg.intervalMin 下次显示闪烁物，时间间隔范围，最小值
-		 * @param {number} cfg.scaleMax 闪烁物缩放值范围，最大值
-		 * @param {number} cfg.scaleMin 闪烁物缩放值范围，最小值
-		 * @param {boolean} cfg.isRotate 闪烁物是否旋转
-		 * @param {boolean} cfg.isAdaptiveScale 闪烁物是否自适应父级缩放
-		 * @param {number} cfg.starMaxCnt 闪烁物是否自适应父级缩放
-		 */
-		public updateStarData(starAnswers?: string[], cfg?: { intervalMax?: number, intervalMin?: number, scaleMax?: number, scaleMin?: number, isRotate?: boolean, isAdaptiveScale?: boolean, starMaxCnt?: number }) {
-			if (!this.starMgr) {
-				return;
-			}
-			this.starMgr.updateData(starAnswers, cfg);
-		}
-
-		/**
-		 * 隐藏闪烁物
-		 * @param {boolean} clearAll = true 是否清除所有
-		 */
-		public hideStar(clearAll: boolean = true) {
-			if (!this.starMgr) {
-				return;
-			}
-			this.starMgr.hide(clearAll);
-		}
-		/* =========== 闪烁物代码-end =========== */
-
-		/* =========== 漂浮物代码-start =========== */
-		private floatMgr: util.FloatMgr;
-
-		/**
-		 * 显示漂浮物
-		 * @param {egret.DisplayObjectContainer} con 漂浮物容器
-		 * @param {...} cfg 漂浮物数据
-		 */
-		public showFloat(con: egret.DisplayObjectContainer, cfg?: { floatAnswers: string[], dires?: string[], speedMax?: number, speedMin?: number, rotateMax?: number, rotateMin?: number, rotateDiff?: number, alphaMax?: number, alphaMin?: number, alphaDiff?: number, scaleMax?: number, scaleMin?: number, scaleDiff?: number, isAllAlpha?: boolean, isAdaptiveScale?: boolean, floatMaxCnt?: number }) {
-			if (!this.floatMgr) {
-				this.floatMgr = new util.FloatMgr(con);
-			}
-			this.floatMgr.show(cfg);
-		}
-
-		/**
-		 * 更新漂浮物数据
-		 * @param {...} cfg 漂浮物数据
-		 * @param {boolean} isInitDefault = true 是否初始化默认值
-		 */
-		public updateFloatData(cfg?: { floatAnswers: string[], dires?: string[], speedMax?: number, speedMin?: number, rotateMax?: number, rotateMin?: number, rotateDiff?: number, alphaMax?: number, alphaMin?: number, alphaDiff?: number, scaleMax?: number, scaleMin?: number, scaleDiff?: number, isAllAlpha?: boolean, isAdaptiveScale?: boolean, floatMaxCnt?: number }) {
-			if (!this.floatMgr) {
-				return;
-			}
-			this.floatMgr.updateData(cfg);
-		}
-
-		/**
-		 * 隐藏漂浮物
-		 * @param {boolean} clearAll = true 是否清除所有
-		 */
-		public hideFloat(clearAll: boolean = true) {
-			if (!this.floatMgr) {
-				return;
-			}
-			this.floatMgr.hide(clearAll);
-		}
-		/* =========== 漂浮物代码-end =========== */
 
 		/* =========== 业务代码-start =========== */
 
@@ -639,7 +430,7 @@ namespace scene {
 		private checkSelect(event: egret.TouchEvent) {
 			if (event.type === egret.TouchEvent.TOUCH_TAP) {
 				if (!event.target.name) return
-				console.log(event.target.name);
+
 				this.pboard_con.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.checkSelect, this)
 				const boardName = event.target.name
 				this.findBoard(boardName)
@@ -817,13 +608,13 @@ namespace scene {
 			}
 			this.openStarted = true;
 			this.hideGuide();
-			this.UiStart = gUiMgr.create(ui.UiStart) as ui.UiStart;
+			// this.UiStart = gUiMgr.create(ui.UiStart) as ui.UiStart;
 			// this.UiStart.once(gConst.eventType.IN_COMPLETE, () => {
 			// 	this.isGameStar = true;
 			// }, this);
 			// this.UiStart.addEventListener(gConst.eventType.TOUCH_TAP, this.clickItem, this);
-			this.UiStart.once(gConst.eventType.CLOSE, this.gameStart, this);
-			this.UiStart.open(chatId);
+			// this.UiStart.once(gConst.eventType.CLOSE, this.gameStart, this);
+			// this.UiStart.open(chatId);
 
 			if (chatId == 3) {
 				return;
@@ -849,10 +640,10 @@ namespace scene {
 			// 	return;
 			// }
 			// this.openStarted = false;
-			if (!this.UiStart) {
-				return;
-			}
-			this.UiStart.hide(void 0, true);
+			// if (!this.UiStart) {
+			// 	return;
+			// }
+			// this.UiStart.hide(void 0, true);
 		}
 
 		/** 打开过场页面 */
@@ -860,20 +651,20 @@ namespace scene {
 			if (GameMgr.isEnd) {
 				return;
 			}
-			this.UiTran = gUiMgr.create(ui.UiTran) as ui.UiTran;
-			// this.UiTran.once(gConst.eventType.IN_COMPLETE, this.nextScene, this);
-			this.UiTran.once(gConst.eventType.CLOSE, this.playTranEnd, this);
-			this.UiTran.open();
+			// this.UiTran = gUiMgr.create(ui.UiTran) as ui.UiTran;
+			// // this.UiTran.once(gConst.eventType.IN_COMPLETE, this.nextScene, this);
+			// this.UiTran.once(gConst.eventType.CLOSE, this.playTranEnd, this);
+			// this.UiTran.open();
 
 			// gSoundMgr.playEff("smvip");
 		}
 
 		/** 关闭过场页面 */
 		private closeTran() {
-			if (!this.UiTran) {
-				return;
-			}
-			this.UiTran.close();
+			// if (!this.UiTran) {
+			// 	return;
+			// }
+			// this.UiTran.close();
 		}
 
 		private openChatDelay: number;
@@ -884,18 +675,18 @@ namespace scene {
 			if (GameMgr.isEnd) {
 				return;
 			}
-			this.UiChat = gUiMgr.create(ui.UiChat) as ui.UiChat;
-			this.UiChat.open(/*id*/);
+			// this.UiChat = gUiMgr.create(ui.UiChat) as ui.UiChat;
+			// this.UiChat.open(/*id*/);
 		}
 
 		/** 关闭对话页面 */
 		private closeChat() {
 			egret.clearTimeout(this.openChatDelay);
 			this.isOpenChat = false;
-			if (!this.UiChat) {
-				return;
-			}
-			this.UiChat.close();
+			// if (!this.UiChat) {
+			// 	return;
+			// }
+			// this.UiChat.close();
 		}
 
 		/** 打开人物页面 */
@@ -919,19 +710,19 @@ namespace scene {
 		private openCongrats() {
 			// console.info("openCongrats");
 			// gTween.fadeIn(this.black, 300, 0.5);
-			this.UiCongrats = gUiMgr.create(ui.UiCongrats) as ui.UiCongrats;
+			// this.UiCongrats = gUiMgr.create(ui.UiCongrats) as ui.UiCongrats;
 			// this.UiCongrats.once(gConst.eventType.CLOSE, this.nextPass, this);
 			// this.UiCongrats.once(gConst.eventType.GAME_END, this.gameEnd, this);
-			this.UiCongrats.open();
+			// this.UiCongrats.open();
 			gSoundMgr.playEff("sm_success");
 		}
 
 		/** 关闭恭喜页面 */
 		private closeCongrats() {
-			if (!this.UiCongrats) {
-				return;
-			}
-			this.UiCongrats.close();
+			// if (!this.UiCongrats) {
+			// 	return;
+			// }
+			// this.UiCongrats.close();
 		}
 
 		// private allFastPlay() {
@@ -989,16 +780,16 @@ namespace scene {
 			// const data: { isReplay: boolean } = event ? event.data : void 0;
 			// this.UiTranEnd.open(/*data*/);
 
-			this.UiStart.once(gConst.eventType.SHOW_CURTAIN_FULL, this.showEnd, this);
-			this.UiStart.showParticles();
+			// this.UiStart.once(gConst.eventType.SHOW_CURTAIN_FULL, this.showEnd, this);
+			// this.UiStart.showParticles();
 		}
 
 		/** 关闭结束过场页面 */
 		private closeTranEnd() {
-			if (!this.UiTranEnd) {
-				return;
-			}
-			this.UiTranEnd.close();
+			// if (!this.UiTranEnd) {
+			// 	return;
+			// }
+			// this.UiTranEnd.close();
 		}
 
 		/** 打开结束界面 */
@@ -1025,10 +816,10 @@ namespace scene {
 			this.UiEnd.hide();
 			this.UiEnd.open();
 			gTween.fadeIn(this.UiEnd, 300, 1)
-			// gTween.fadeOut(this.conBg, 300, 1)
-			// gTween.fadeOut(this.con, 300, 1)
-			this.conBg.visible = false
-			this.con.visible = false
+			gTween.fadeOut(this.conBg, 300, 1)
+			gTween.fadeOut(this.con, 300, 1)
+			// this.conBg.visible = false
+			// this.con.visible = false
 
 			// egret.setTimeout(this.showEnd, this, 500);
 
@@ -1147,7 +938,7 @@ namespace scene {
 			// if (this.UiChat) {
 			// 	this.UiChat.hideChat();
 			// }
-			this.UiEndFail.show();
+			// this.UiEndFail.show();
 
 			this.UiFirst.updateDir(
 				{
@@ -1165,18 +956,18 @@ namespace scene {
 		/** 结束界面（失败）其它元素展示 */
 		public showEndFailOther() {
 			// console.info("showEndFailOther");
-			if (!this.UiEndFail) {
-				return;
-			}
-			this.UiEndFail.showOther();
+			// if (!this.UiEndFail) {
+			// 	return;
+			// }
+			// this.UiEndFail.showOther();
 		}
 
 		/** 关闭结束界面（失败） */
 		private closeEndFail() {
-			if (!this.UiEndFail) {
-				return;
-			}
-			this.UiEndFail.close();
+			// if (!this.UiEndFail) {
+			// 	return;
+			// }
+			// this.UiEndFail.close();
 		}
 
 
@@ -1219,49 +1010,49 @@ namespace scene {
 		// 	gTween.hideBubble(conBubble, 300, { orgS: 1, orgA: 1 });
 		// }
 
-		/** 创建挖空遮罩 */
-		private lightMask: com.ComLightMask; //挖空遮罩组件
-		private createMask(): void {
-			let lightMask = this.lightMask = new com.ComLightMask();
-			this.addChild(lightMask);
-			lightMask.visible = false;
-		}
+		// /** 创建挖空遮罩 */
+		// private lightMask: com.ComLightMask; //挖空遮罩组件
+		// private createMask(): void {
+		// 	let lightMask = this.lightMask = new com.ComLightMask();
+		// 	this.addChild(lightMask);
+		// 	lightMask.visible = false;
+		// }
 
-		private updateMask(): boolean {
-			const lightMask = this.lightMask;
-			if (!lightMask) {
-				return;
-			}
-			// if (!lightMask.visible) {
-			// 	return;
-			// }
-			if (!this.isShowMask) {
-				return;
-			}
+		// private updateMask(): boolean {
+		// 	const lightMask = this.lightMask;
+		// 	if (!lightMask) {
+		// 		return;
+		// 	}
+		// 	// if (!lightMask.visible) {
+		// 	// 	return;
+		// 	// }
+		// 	if (!this.isShowMask) {
+		// 		return;
+		// 	}
 
-			const maskParent = lightMask.parent;
-			if (!maskParent) {
-				return;
-			}
+		// 	const maskParent = lightMask.parent;
+		// 	if (!maskParent) {
+		// 		return;
+		// 	}
 
-			const obj = gGuideMgr.guideObj;
-			if (!obj) {
-				return;
-			}
+		// 	const obj = gGuideMgr.guideObj;
+		// 	if (!obj) {
+		// 		return;
+		// 	}
 
-			const target = (obj as com.ComChat).chat;
+		// 	const target = (obj as com.ComChat).chat;
 
-			lightMask.setMaskSize(this.width, this.height, .5);
+		// 	lightMask.setMaskSize(this.width, this.height, .5);
 
-			const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
-			const w = target.width * baseScale;
-			const h = target.height * baseScale;
-			lightMask.setLightSize(w, 1, h, 70);
+		// 	const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
+		// 	const w = target.width * baseScale;
+		// 	const h = target.height * baseScale;
+		// 	lightMask.setLightSize(w, 1, h, 70);
 
-			let pos = this.retObjPos(target, maskParent);
-			lightMask.setLightPos(pos.x - w / 2, pos.y - h / 2);
-			return true;
-		}
+		// 	let pos = this.retObjPos(target, maskParent);
+		// 	lightMask.setLightPos(pos.x - w / 2, pos.y - h / 2);
+		// 	return true;
+		// }
 
 		private retObjPos(obj: egret.DisplayObject | egret.DisplayObjectContainer, parent: egret.DisplayObjectContainer): egret.Point {
 			if (!obj || !parent) {
@@ -1280,59 +1071,59 @@ namespace scene {
 		private guideWord: eui.Image;
 		private isShowMask: boolean;
 
-		/** 显示遮罩 */
-		private showMask(inCallBack?: Function, inThisObj?: any, outCallBack?: Function, outThisObj?: any) {
-			if (this.showMasked) {
-				return;
-			}
-			const lightMask = this.lightMask;
+		// /** 显示遮罩 */
+		// private showMask(inCallBack?: Function, inThisObj?: any, outCallBack?: Function, outThisObj?: any) {
+		// 	if (this.showMasked) {
+		// 		return;
+		// 	}
+		// 	const lightMask = this.lightMask;
 
-			if (!lightMask) {
-				return
-			}
+		// 	if (!lightMask) {
+		// 		return
+		// 	}
 
-			// lightMask.visible = true;
-			// gTween.toScale(lightMask.cirleLight, 0, 500, 10, void 0, { duration: 50 }, {
-			// 	callback: () => {
-			// 		if (inCallBack) {
-			// 			inCallBack.call(inThisObj);
-			// 		}
-			// 		gTween.toScale(lightMask.cirleLight, 10, 500, 0, void 0, void 0, {
-			// 			callback: outCallBack,
-			// 			thisObj: outThisObj
-			// 		});
-			// 	}
-			// });
+		// 	// lightMask.visible = true;
+		// 	// gTween.toScale(lightMask.cirleLight, 0, 500, 10, void 0, { duration: 50 }, {
+		// 	// 	callback: () => {
+		// 	// 		if (inCallBack) {
+		// 	// 			inCallBack.call(inThisObj);
+		// 	// 		}
+		// 	// 		gTween.toScale(lightMask.cirleLight, 10, 500, 0, void 0, void 0, {
+		// 	// 			callback: outCallBack,
+		// 	// 			thisObj: outThisObj
+		// 	// 		});
+		// 	// 	}
+		// 	// });
 
-			this.isShowMask = true;
-			if (this.updateMask()) {
-				this.showMasked = true;
-				gTween.fadeIn(lightMask, 300, 1);
-			}
-		}
+		// 	this.isShowMask = true;
+		// 	if (this.updateMask()) {
+		// 		this.showMasked = true;
+		// 		gTween.fadeIn(lightMask, 300, 1);
+		// 	}
+		// }
 
-		/** 隐藏遮罩 */
-		private hideMask() {
-			if (!this.showMasked) {
-				return;
-			}
+		// /** 隐藏遮罩 */
+		// private hideMask() {
+		// 	if (!this.showMasked) {
+		// 		return;
+		// 	}
 
-			const lightMask = this.lightMask;
+		// 	const lightMask = this.lightMask;
 
-			if (!lightMask) {
-				return
-			}
+		// 	if (!lightMask) {
+		// 		return
+		// 	}
 
-			this.showMasked = false;
-			this.isShowMask = false;
-			gTween.fadeOut(lightMask, 200);
+		// 	this.showMasked = false;
+		// 	this.isShowMask = false;
+		// 	gTween.fadeOut(lightMask, 200);
 
-			const word = this.guideWord;
-			if (!word || !word.parent) {
-				return;
-			}
-			gTween.fadeOut(word, 200);
-		}
+		// 	const word = this.guideWord;
+		// 	if (!word || !word.parent) {
+		// 		return;
+		// 	}
+		// 	gTween.fadeOut(word, 200);
+		// }
 
 		private guide_pos: eui.Image; //引导的点
 		private guide: com.ComGuide; //引导组件
@@ -1553,9 +1344,7 @@ namespace scene {
 				}
 			}
 
-			this.setMaxParticles(particleId0, maxParticles / resName.length);
 
-			this.startParticle(particleId0, duration);
 		}
 
 		/** 展示粒子 */

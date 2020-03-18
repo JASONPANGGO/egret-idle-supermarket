@@ -95,7 +95,14 @@ namespace ui {
 
 			this.playMC()
 			gTween.yoyoBtn(this.btn)
+			this.logo.visible = false
+			this.btnCon.visible = false
+			egret.setTimeout(() => {
+				gTween.toBottomShow(this.logo, 800, 300, void 0, 1, egret.Ease.elasticOut)
+				gTween.toTopShow(this.btnCon, 800, 300, void 0, 1, egret.Ease.elasticOut)
+			}, this, 300)
 		}
+
 
 		/** 每次结束界面都会调用 */
 		protected stop() {
@@ -150,8 +157,8 @@ namespace ui {
 			if (this.screenType == gConst.screenType.VERTICAL) {
 				//竖屏
 
-				this.logo.y = 0.15 * this.height
-				this.btnCon.y = this.logo.y + this.logo.height + 30
+				this.logo.y = 0.12 * this.height
+				this.btnCon.y = this.logo.y + this.logo.height + 0.1 * this.height
 				this.btnCon.bottom = NaN
 
 				switch (this.mobileType) {

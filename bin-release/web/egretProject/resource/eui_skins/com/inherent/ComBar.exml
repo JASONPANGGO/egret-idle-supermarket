@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComBar" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image scale9Grid="1,1,4,4" source="ui1_frame_png"/>
-	<e:Image id="thumb" scale9Grid="1,1,4,4"  source="ui2_frame2_png"/>
-	<e:Label id="labelDisplay" textColor="0xffffff" horizontalCenter="0" verticalCenter="0"  visible="false"/>
-</e:Skin>

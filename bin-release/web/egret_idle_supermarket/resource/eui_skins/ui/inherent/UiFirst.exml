@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="skins.UiFirst" width="750" height="1334" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<!--<e:Rect id="bg" width="750" height="150" x="0" y="0" fillColor="0x2f3651" fillAlpha="0.5" />-->
+	<e:Group id="conLogo" anchorOffsetX="0" anchorOffsetY="0" y="0" x="0" scaleX="0.4" scaleY="0.4">
+		<e:Group id="gLogo" x="0" y="0">
+			<e:Image id="logo" source="blogo_png" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" x="0" y="0"/>
+		</e:Group>
+
+	</e:Group>
+	<e:Group id="conBtn" anchorOffsetX="0" anchorOffsetY="0" y="1160.61" x="188">
+		<e:Group id="gBtn" x="0" y="0">
+			<e:Image id="btn" source="lang_pbtn_install_png" scaleX="1" scaleY="1" x="0" y="0"/>
+		</e:Group>
+
+	</e:Group>
+</e:Skin>

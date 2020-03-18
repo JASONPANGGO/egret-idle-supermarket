@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComSaw" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
-        xmlns:item="item.*">
-	<e:Group id="con" width="145" height="289">
-		<e:Image id="topLayer" y="0" source="stuff6_lv3_png"/>
-	</e:Group>
-</e:Skin>

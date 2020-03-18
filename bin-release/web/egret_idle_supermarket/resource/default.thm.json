@@ -1,0 +1,44 @@
+{
+  "skins": {
+    "eui.Button": "resource/eui_skins/ButtonSkin.exml",
+    "eui.CheckBox": "resource/eui_skins/CheckBoxSkin.exml",
+    "eui.HScrollBar": "resource/eui_skins/HScrollBarSkin.exml",
+    "eui.HSlider": "resource/eui_skins/HSliderSkin.exml",
+    "eui.Panel": "resource/eui_skins/PanelSkin.exml",
+    "eui.TextInput": "resource/eui_skins/TextInputSkin.exml",
+    "eui.ProgressBar": "resource/eui_skins/ProgressBarSkin.exml",
+    "eui.RadioButton": "resource/eui_skins/RadioButtonSkin.exml",
+    "eui.Scroller": "resource/eui_skins/ScrollerSkin.exml",
+    "eui.ToggleSwitch": "resource/eui_skins/ToggleSwitchSkin.exml",
+    "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
+    "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
+    "eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml"
+  },
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    {
+      "path": "resource/eui_skins/com/base/ComEmpty.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.ComEmpty\" width=\"200\" height=\"100\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\r\n\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/com/inherent/ComGuide.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.ComGuide\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:com=\"com.*\">\r\n\t<e:Image id=\"hand\"  x=\"58\" y=\"26.67\" anchorOffsetX=\"58\" anchorOffsetY=\"26.67\" source=\"phand_png\"/>\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/scene/GameScene.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.GameScene\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:ns1=\"*\"\r\n        xmlns:com=\"com.*\" width=\"750\" height=\"1334\">\r\n\t<w:Config id=\"1699015f821\" />\r\n\t<e:Rect width=\"100%\" height=\"100%\" fillColor=\"0x4ea9f0\" visible=\"false\" />\r\n\t<e:Rect id=\"black\" width=\"100%\" height=\"100%\" fillColor=\"0x000000\" alpha=\".5\" visible=\"false\" />\r\n\t<e:Group id=\"conBg\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" width=\"2341\" height=\"2044\" x=\"-720\" y=\"-280\">\r\n\t\t<e:Image source=\"pbg_jpg\" height=\"2044\" width=\"2341\" y=\"0\" x=\"0\"/>\r\n\t\t<e:Image id=\"housepoint_1\" source=\"pbase_png\" scaleX=\"1\" scaleY=\"1\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\" width=\"603\" height=\"361\" x=\"589.5\" y=\"683\"/>\r\n\t\t<e:Group id=\"housepoint_1_con\" x=\"589.5\" y=\"701.5\" width=\"603\" height=\"361\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\">\r\n\t\t</e:Group>\r\n\t\t<e:Image id=\"housepoint_2\" source=\"pbase_png\" scaleX=\"1\" scaleY=\"1\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\" width=\"603\" height=\"361\" y=\"1020\" x=\"1120\"/>\r\n\t\t<e:Group id=\"housepoint_2_con\" x=\"1120\" y=\"1020\" width=\"603\" height=\"361\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\">\r\n\t\t</e:Group>\r\n\t\t<e:Image source=\"pbgup_png\" x=\"1082.68\" y=\"960.17\"/>\r\n\t\t<e:Image id=\"housepoint_3\" source=\"pbase_png\" x=\"1640\" y=\"1320\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\"/>\r\n\t\t<e:Group id=\"housepoint_3_con\" x=\"1663.98\" y=\"1341.74\" width=\"603\" height=\"361\" anchorOffsetX=\"301.5\" anchorOffsetY=\"180.5\">\r\n\t\t</e:Group>\r\n\r\n\r\n\t</e:Group>\r\n\t<e:Group id=\"con\" anchorOffsetY=\"0\" anchorOffsetX=\"0\">\r\n\t\t<e:Group id=\"pboard_con\" y=\"73\" horizontalCenter=\"0\">\r\n\t\t\t<e:layout>\r\n\t\t\t\t<e:HorizontalLayout gap=\"10\"/>\r\n\t\t\t</e:layout>\r\n\t\t</e:Group>\r\n\r\n\r\n\t</e:Group>\r\n\t<e:Image id=\"con_guide\" source=\"lang_guide_png\" y=\"804.24\" x=\"138.5\"/>\r\n\t<!--<e:Group id=\"conParticles\" horizontalCenter=\"0\" top=\"0\" touchChildren=\"false\" touchEnabled=\"false\">\r\n\t</e:Group>-->\r\n\r\n\t<!--<e:Group id=\"conFloat\" x=\"0\" width=\"100%\" height=\"82%\" bottom=\"0\">\r\n\t<e:Rect id=\"floatDebug\" width=\"100%\" height=\"100%\" fillColor=\"0x00ff00\" fillAlpha=\"0.3\" x=\"0\" y=\"0\" visible=\"false\" />\r\n</e:Group>\r\n-->\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/ui/base/UiEmpty.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.UiEmpty\" width=\"750\" height=\"1334\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\r\n\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/ui/inherent/UiEnd.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.UiEnd\" height=\"1334\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\"\r\n        xmlns:ns1=\"*\" xmlns:com=\"com.*\" xmlns:tween=\"egret.tween.*\" width=\"750\">\r\n\t<e:Group id=\"bgCon\" width=\"1334\" height=\"1334\" horizontalCenter=\"0\" scaleX=\"1\" bottom=\"0\">\r\n\t\t<e:Image id=\"bg\" source=\"ebg_jpg\" width=\"1334\" height=\"1334\" x=\"0\" y=\"0\"/>\r\n\t\t<com:ComMovieClip id=\"bg_mc\" width=\"1334\" height=\"1334\" x=\"0\" y=\"0\"/>\r\n\r\n\r\n\r\n\t</e:Group>\r\n\t<e:Image id=\"logo\" source=\"blogo_png\" horizontalCenter=\"0\" y=\"120\"/>\r\n\t<e:Group id=\"btnCon\" horizontalCenter=\"0\" y=\"588\" width=\"401\" height=\"159\">\r\n\t\t<e:Image id=\"btn\" source=\"lang_ebtn_install_png\" y=\"79.5\" horizontalCenter=\"0\" anchorOffsetX=\"200.5\" anchorOffsetY=\"79.5\"/>\r\n\t</e:Group>\r\n\r\n\t<!--<w:Declarations>\r\n\t<tween:TweenGroup id=\"cool\">\r\n\t\t<tween:TweenItem target=\"{con_cool_0}\">\r\n\t\t\t<tween:Set>\r\n\t\t\t\t<tween:props>\r\n\t\t\t\t\t<e:Object x=\"{0}\" />\r\n\t\t\t\t</tween:props>\r\n\t\t\t</tween:Set>\r\n\t\t\t<tween:To duration=\"10000\">\r\n\t\t\t\t<tween:props>\r\n\t\t\t\t\t<e:Object x=\"{-1334}\" />\r\n\t\t\t\t</tween:props>\r\n\t\t\t</tween:To>\r\n\t\t</tween:TweenItem>\r\n\t\t<tween:TweenItem target=\"{con_cool_1}\">\r\n\t\t\t<tween:Set>\r\n\t\t\t\t<tween:props>\r\n\t\t\t\t\t<e:Object x=\"{1334}\" />\r\n\t\t\t\t</tween:props>\r\n\t\t\t</tween:Set>\r\n\t\t\t<tween:To duration=\"10000\">\r\n\t\t\t\t<tween:props>\r\n\t\t\t\t\t<e:Object x=\"{0}\" />\r\n\t\t\t\t</tween:props>\r\n\t\t\t</tween:To>\r\n\t\t</tween:TweenItem>\r\n\t</tween:TweenGroup>\r\n</w:Declarations>\r\n-->\r\n<!--<e:Image id=\"bg\" source=\"e_bg_jpg\" fillMode=\"repeat\" x=\"0\" y=\"0\" height=\"100%\" width=\"100%\" />\r\n-->\r\n<!--<e:Rect id=\"black\" left=\"0\" top=\"0\" right=\"0\" bottom=\"0\" fillAlpha=\"0.5\" visible=\"false\" />\r\n<e:Group id=\"conBg\" width=\"1334\" height=\"1334\" horizontalCenter=\"0\" bottom=\"0\">\r\n\t<e:Image id=\"bg\" source=\"ebg_jpg\" />\r\n\t<e:Image source=\"ending_1_png\" visible=\"false\" />\r\n\t<com:ComMovieClip id=\"mcBg\" width=\"1334\" height=\"1334\" />\r\n</e:Group>\r\n<e:Group id=\"conLogo\" top=\"10%\" horizontalCenter=\"0\">\r\n\t<e:Image id=\"logo\" source=\"blogo_png\" x=\"0\" y=\"0\" />\r\n</e:Group>\r\n<e:Group id=\"conBtn\" horizontalCenter=\"0\" bottom=\"38%\">\r\n\t<e:Image id=\"replay\" x=\"241\" y=\"60\" source=\"\" />\r\n\t<e:Image id=\"btn\" x=\"200.5\" anchorOffsetX=\"200.5\" anchorOffsetY=\"79.5\" y=\"79.5\" source=\"lang_ebtn_install_png\" />\r\n</e:Group>\r\n-->\r\n</e:Skin>"
+    },
+    {
+      "path": "resource/eui_skins/ui/inherent/UiFirst.exml",
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<e:Skin class=\"skins.UiFirst\" width=\"750\" height=\"1334\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\">\r\n\t<!--<e:Rect id=\"bg\" width=\"750\" height=\"150\" x=\"0\" y=\"0\" fillColor=\"0x2f3651\" fillAlpha=\"0.5\" />-->\r\n\t<e:Group id=\"conLogo\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" y=\"0\" x=\"0\" scaleX=\"0.4\" scaleY=\"0.4\">\r\n\t\t<e:Group id=\"gLogo\" x=\"0\" y=\"0\">\r\n\t\t\t<e:Image id=\"logo\" source=\"blogo_png\" scaleX=\"1\" scaleY=\"1\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" x=\"0\" y=\"0\"/>\r\n\t\t</e:Group>\r\n\r\n\t</e:Group>\r\n\t<e:Group id=\"conBtn\" anchorOffsetX=\"0\" anchorOffsetY=\"0\" y=\"1160.61\" x=\"188\">\r\n\t\t<e:Group id=\"gBtn\" x=\"0\" y=\"0\">\r\n\t\t\t<e:Image id=\"btn\" source=\"lang_pbtn_install_png\" scaleX=\"1\" scaleY=\"1\" x=\"0\" y=\"0\"/>\r\n\t\t</e:Group>\r\n\r\n\t</e:Group>\r\n</e:Skin>"
+    }
+  ]
+}

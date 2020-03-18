@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComChat" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
-        xmlns:item="item.*">
-	<e:Image id="hand" source="head_boy_png" x="50" y="10"  anchorOffsetX="50" anchorOffsetY="50"/>
-	<e:Group id="con" x="115" y="0">
-		<e:Image id="chat" source="lang_text1_png" x="0" y="0"/>
-	</e:Group>
-</e:Skin>

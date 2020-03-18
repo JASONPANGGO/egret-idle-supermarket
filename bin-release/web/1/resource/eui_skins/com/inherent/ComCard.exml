@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComCard" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
-        xmlns:item="item.*" width="117" height="182">
-	<e:Group id="con" x="58.5" y="91" anchorOffsetX="58.5" anchorOffsetY="91">
-		<e:Image id="card" x="58.5" y="91" anchorOffsetX="58.5" anchorOffsetY="91" source="cardblue_ui_png" />
-	</e:Group>
-</e:Skin>

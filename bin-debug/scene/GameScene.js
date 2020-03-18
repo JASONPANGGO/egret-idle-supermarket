@@ -15,13 +15,16 @@ var scene;
         __extends(GameScene, _super);
         function GameScene() {
             var _this = _super.call(this) || this;
+            // private UiEndFail: ui.UiEndFail;
+            // private UiChat: ui.UiChat;
+            // private UiCongrats: ui.UiCongrats;
             _this.isLoadRes = null; //是否已loadRes()资源
             _this.isFirstOpen = true; //是否第一次打开场景
             _this.firstTouch = true;
             _this.gridDic = {};
             _this.skillProgress = 0;
             _this.selectionItems = gConst.boardItems;
-            /* =========== 漂浮物代码-end =========== */
+            /* =========== 框架结构代码-end =========== */
             /* =========== 业务代码-start =========== */
             _this.currentHousePoint = 1;
             _this.goldSpace = 10;
@@ -157,7 +160,7 @@ var scene;
         GameScene.prototype.resizeView = function () {
             // console.info("resizeView", this.width, this.height, GameMgr.screenType, GameMgr.mobileType);
             this.dispatchEventWith(gConst.eventType.RESIZE_VIEW);
-            this.updataParticlesEmitter();
+            // this.updataParticlesEmitter();
             var baseScale = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
             var conBg = this.conBg;
             var con = this.con;
@@ -249,27 +252,27 @@ var scene;
             if (this.UiFirst) {
                 this.UiFirst.destroy();
             }
-            if (this.UiStart) {
-                this.UiStart.destroy();
-            }
-            if (this.UiTran) {
-                this.UiTran.destroy();
-            }
-            if (this.UiTranEnd) {
-                this.UiTranEnd.destroy();
-            }
-            if (this.UiEnd) {
-                this.UiEnd.destroy();
-            }
-            if (this.UiEndFail) {
-                this.UiEndFail.destroy();
-            }
-            if (this.UiChat) {
-                this.UiChat.destroy();
-            }
-            if (this.UiCongrats) {
-                this.UiCongrats.destroy();
-            }
+            // if (this.UiStart) {
+            // 	this.UiStart.destroy();
+            // }
+            // if (this.UiTran) {
+            // 	this.UiTran.destroy();
+            // }
+            // if (this.UiTranEnd) {
+            // 	this.UiTranEnd.destroy();
+            // }
+            // if (this.UiEnd) {
+            // 	this.UiEnd.destroy();
+            // }
+            // if (this.UiEndFail) {
+            // 	this.UiEndFail.destroy();
+            // }
+            // if (this.UiChat) {
+            // 	this.UiChat.destroy();
+            // }
+            // if (this.UiCongrats) {
+            // 	this.UiCongrats.destroy();
+            // }
             // if (this.UiPeople) {
             // 	this.UiPeople.destroy();
             // }
@@ -303,196 +306,6 @@ var scene;
                 egret.clearTimeout(this.endToNoOperationDelay);
                 this.endToNoOperationDelay = egret.setTimeout(this.openEndFail, this, endToNoOperationTimer);
             }
-        };
-        /**
-         * 创建所有粒子
-         * @param {egret.DisplayObjectContainer} parent 粒子父级
-         * @param {string[]} resName 粒子资源名称组
-         * @param {string} cfgName 粒子配置名称
-         * @param {number} idx 粒子层级
-         * @param {boolean} autoStart = true 粒子自动开始播放
-         * @param {number} x = 0 粒子X坐标
-         * @param {number} y = 0 粒子Y坐标
-         * @returns {number} 当前粒子ID
-         */
-        GameScene.prototype.createParticles = function (parent, resName, cfgName, idx, autoStart, x, y) {
-            if (autoStart === void 0) { autoStart = true; }
-            if (x === void 0) { x = 0; }
-            if (y === void 0) { y = 0; }
-            if (!this.particleMgr) {
-                this.particleMgr = new util.ParticleMgr(this);
-            }
-            return this.particleMgr.createParticles(parent, resName, cfgName, idx, autoStart, x, y);
-        };
-        /**
-         * 获取粒子
-         * @param {number} id 粒子ID
-         */
-        GameScene.prototype.getParticle = function (id) {
-            if (!this.particleMgr) {
-                return;
-            }
-            return this.particleMgr.getParticle(id);
-        };
-        /**
-         * 开始播放所有粒子
-         * @param {number} duration 粒子出现总时间
-         */
-        GameScene.prototype.startParticles = function (duration) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.startParticles(duration);
-        };
-        /**
-         * 开始播放粒子
-         * @param {number} id 当前粒子ID
-         * @param {number} duration 粒子出现总时间
-         */
-        GameScene.prototype.startParticle = function (id, duration) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.startParticle(id, duration);
-        };
-        /**
-         * 停止创建所有粒子
-         * @param {boolean} clear 是否清除掉现有粒子
-         */
-        GameScene.prototype.stopParticles = function (clear) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.stopParticles(clear);
-        };
-        /**
-         * 停止创建粒子
-         * @param {number} id 当前粒子ID
-         * @param {boolean} clear 是否清除掉现有粒子
-         */
-        GameScene.prototype.stopParticle = function (id, clear) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.stopParticle(id, clear);
-        };
-        /**
-         * 设置所有粒子层级
-         */
-        GameScene.prototype.setParticlesIndex = function (idx) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.setParticlesIndex(idx);
-        };
-        /**
-         * 更新所有粒子发射位置
-         */
-        GameScene.prototype.updataParticlesEmitter = function () {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.updataParticlesEmitter();
-        };
-        /**
-         * 设置所有粒子位置
-         */
-        GameScene.prototype.setParticlesPos = function (x, y) {
-            if (x === void 0) { x = 0; }
-            if (y === void 0) { y = 0; }
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.setParticlesPos(x, y);
-        };
-        /**
-         * 设置所有粒子系统最大粒子数，超过该数量将不会继续创建粒子，取值范围[1,Number.MAX_VALUE]
-         * @param {number} id 当前粒子ID
-         */
-        GameScene.prototype.setMaxParticles = function (id, max) {
-            if (!this.particleMgr) {
-                return;
-            }
-            this.particleMgr.setMaxParticles(id, max);
-        };
-        /**
-         * 显示闪烁物
-         * @param {egret.DisplayObjectContainer} con 闪烁物容器
-         * @param {string[]} starAnswers 闪烁物资源名称配置
-         * @param {number} cfg.intervalMax 下次显示闪烁物，时间间隔范围，最大值
-         * @param {number} cfg.intervalMin 下次显示闪烁物，时间间隔范围，最小值
-         * @param {number} cfg.scaleMax 闪烁物缩放值范围，最大值
-         * @param {number} cfg.scaleMin 闪烁物缩放值范围，最小值
-         * @param {boolean} cfg.isRotate 闪烁物是否旋转
-         * @param {boolean} cfg.isAdaptiveScale 闪烁物是否自适应父级缩放
-         * @param {number} cfg.starMaxCnt 闪烁物是否自适应父级缩放
-         */
-        GameScene.prototype.showStar = function (con, starAnswers, cfg) {
-            if (!this.starMgr) {
-                this.starMgr = new util.StarMgr(con);
-            }
-            this.starMgr.show(starAnswers, cfg);
-        };
-        /**
-         * 更新闪烁物数据
-         * @param {string[]} starAnswers 闪烁物资源名称配置
-         * @param {number} cfg.intervalMax 下次显示闪烁物，时间间隔范围，最大值
-         * @param {number} cfg.intervalMin 下次显示闪烁物，时间间隔范围，最小值
-         * @param {number} cfg.scaleMax 闪烁物缩放值范围，最大值
-         * @param {number} cfg.scaleMin 闪烁物缩放值范围，最小值
-         * @param {boolean} cfg.isRotate 闪烁物是否旋转
-         * @param {boolean} cfg.isAdaptiveScale 闪烁物是否自适应父级缩放
-         * @param {number} cfg.starMaxCnt 闪烁物是否自适应父级缩放
-         */
-        GameScene.prototype.updateStarData = function (starAnswers, cfg) {
-            if (!this.starMgr) {
-                return;
-            }
-            this.starMgr.updateData(starAnswers, cfg);
-        };
-        /**
-         * 隐藏闪烁物
-         * @param {boolean} clearAll = true 是否清除所有
-         */
-        GameScene.prototype.hideStar = function (clearAll) {
-            if (clearAll === void 0) { clearAll = true; }
-            if (!this.starMgr) {
-                return;
-            }
-            this.starMgr.hide(clearAll);
-        };
-        /**
-         * 显示漂浮物
-         * @param {egret.DisplayObjectContainer} con 漂浮物容器
-         * @param {...} cfg 漂浮物数据
-         */
-        GameScene.prototype.showFloat = function (con, cfg) {
-            if (!this.floatMgr) {
-                this.floatMgr = new util.FloatMgr(con);
-            }
-            this.floatMgr.show(cfg);
-        };
-        /**
-         * 更新漂浮物数据
-         * @param {...} cfg 漂浮物数据
-         * @param {boolean} isInitDefault = true 是否初始化默认值
-         */
-        GameScene.prototype.updateFloatData = function (cfg) {
-            if (!this.floatMgr) {
-                return;
-            }
-            this.floatMgr.updateData(cfg);
-        };
-        /**
-         * 隐藏漂浮物
-         * @param {boolean} clearAll = true 是否清除所有
-         */
-        GameScene.prototype.hideFloat = function (clearAll) {
-            if (clearAll === void 0) { clearAll = true; }
-            if (!this.floatMgr) {
-                return;
-            }
-            this.floatMgr.hide(clearAll);
         };
         GameScene.prototype.initBg = function () {
             var con = this.con;
@@ -534,7 +347,6 @@ var scene;
             if (event.type === egret.TouchEvent.TOUCH_TAP) {
                 if (!event.target.name)
                     return;
-                console.log(event.target.name);
                 this.pboard_con.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.checkSelect, this);
                 var boardName_1 = event.target.name;
                 this.findBoard(boardName_1);
@@ -677,13 +489,13 @@ var scene;
             }
             this.openStarted = true;
             this.hideGuide();
-            this.UiStart = gUiMgr.create(ui.UiStart);
+            // this.UiStart = gUiMgr.create(ui.UiStart) as ui.UiStart;
             // this.UiStart.once(gConst.eventType.IN_COMPLETE, () => {
             // 	this.isGameStar = true;
             // }, this);
             // this.UiStart.addEventListener(gConst.eventType.TOUCH_TAP, this.clickItem, this);
-            this.UiStart.once(gConst.eventType.CLOSE, this.gameStart, this);
-            this.UiStart.open(chatId);
+            // this.UiStart.once(gConst.eventType.CLOSE, this.gameStart, this);
+            // this.UiStart.open(chatId);
             if (chatId == 3) {
                 return;
             }
@@ -705,45 +517,45 @@ var scene;
             // 	return;
             // }
             // this.openStarted = false;
-            if (!this.UiStart) {
-                return;
-            }
-            this.UiStart.hide(void 0, true);
+            // if (!this.UiStart) {
+            // 	return;
+            // }
+            // this.UiStart.hide(void 0, true);
         };
         /** 打开过场页面 */
         GameScene.prototype.openTran = function (event) {
             if (GameMgr.isEnd) {
                 return;
             }
-            this.UiTran = gUiMgr.create(ui.UiTran);
-            // this.UiTran.once(gConst.eventType.IN_COMPLETE, this.nextScene, this);
-            this.UiTran.once(gConst.eventType.CLOSE, this.playTranEnd, this);
-            this.UiTran.open();
+            // this.UiTran = gUiMgr.create(ui.UiTran) as ui.UiTran;
+            // // this.UiTran.once(gConst.eventType.IN_COMPLETE, this.nextScene, this);
+            // this.UiTran.once(gConst.eventType.CLOSE, this.playTranEnd, this);
+            // this.UiTran.open();
             // gSoundMgr.playEff("smvip");
         };
         /** 关闭过场页面 */
         GameScene.prototype.closeTran = function () {
-            if (!this.UiTran) {
-                return;
-            }
-            this.UiTran.close();
+            // if (!this.UiTran) {
+            // 	return;
+            // }
+            // this.UiTran.close();
         };
         /** 打开对话页面 */
         GameScene.prototype.openChat = function () {
             if (GameMgr.isEnd) {
                 return;
             }
-            this.UiChat = gUiMgr.create(ui.UiChat);
-            this.UiChat.open();
+            // this.UiChat = gUiMgr.create(ui.UiChat) as ui.UiChat;
+            // this.UiChat.open(/*id*/);
         };
         /** 关闭对话页面 */
         GameScene.prototype.closeChat = function () {
             egret.clearTimeout(this.openChatDelay);
             this.isOpenChat = false;
-            if (!this.UiChat) {
-                return;
-            }
-            this.UiChat.close();
+            // if (!this.UiChat) {
+            // 	return;
+            // }
+            // this.UiChat.close();
         };
         /** 打开人物页面 */
         // private openPeople(id?: number, wordId?: number) {
@@ -764,18 +576,18 @@ var scene;
         GameScene.prototype.openCongrats = function () {
             // console.info("openCongrats");
             // gTween.fadeIn(this.black, 300, 0.5);
-            this.UiCongrats = gUiMgr.create(ui.UiCongrats);
+            // this.UiCongrats = gUiMgr.create(ui.UiCongrats) as ui.UiCongrats;
             // this.UiCongrats.once(gConst.eventType.CLOSE, this.nextPass, this);
             // this.UiCongrats.once(gConst.eventType.GAME_END, this.gameEnd, this);
-            this.UiCongrats.open();
+            // this.UiCongrats.open();
             gSoundMgr.playEff("sm_success");
         };
         /** 关闭恭喜页面 */
         GameScene.prototype.closeCongrats = function () {
-            if (!this.UiCongrats) {
-                return;
-            }
-            this.UiCongrats.close();
+            // if (!this.UiCongrats) {
+            // 	return;
+            // }
+            // this.UiCongrats.close();
         };
         GameScene.prototype.playTranEnd = function (event) {
             var _this = this;
@@ -811,15 +623,15 @@ var scene;
             // this.UiTranEnd.once(gConst.eventType.CLOSE, this.openEnd, this);
             // const data: { isReplay: boolean } = event ? event.data : void 0;
             // this.UiTranEnd.open(/*data*/);
-            this.UiStart.once(gConst.eventType.SHOW_CURTAIN_FULL, this.showEnd, this);
-            this.UiStart.showParticles();
+            // this.UiStart.once(gConst.eventType.SHOW_CURTAIN_FULL, this.showEnd, this);
+            // this.UiStart.showParticles();
         };
         /** 关闭结束过场页面 */
         GameScene.prototype.closeTranEnd = function () {
-            if (!this.UiTranEnd) {
-                return;
-            }
-            this.UiTranEnd.close();
+            // if (!this.UiTranEnd) {
+            // 	return;
+            // }
+            // this.UiTranEnd.close();
         };
         /** 打开结束界面 */
         GameScene.prototype.openEnd = function (isShowEnd) {
@@ -842,10 +654,10 @@ var scene;
             this.UiEnd.hide();
             this.UiEnd.open();
             gTween.fadeIn(this.UiEnd, 300, 1);
-            // gTween.fadeOut(this.conBg, 300, 1)
-            // gTween.fadeOut(this.con, 300, 1)
-            this.conBg.visible = false;
-            this.con.visible = false;
+            gTween.fadeOut(this.conBg, 300, 1);
+            gTween.fadeOut(this.con, 300, 1);
+            // this.conBg.visible = false
+            // this.con.visible = false
             // egret.setTimeout(this.showEnd, this, 500);
             // GameMgr.endType = gConst.endType.VICTORY;
             // this.showHead();
@@ -945,7 +757,7 @@ var scene;
             // if (this.UiChat) {
             // 	this.UiChat.hideChat();
             // }
-            this.UiEndFail.show();
+            // this.UiEndFail.show();
             this.UiFirst.updateDir({
                 horDir: gConst.direction.RIGHT_TOP,
                 verDir: gConst.direction.CENTER_TOP
@@ -958,52 +770,86 @@ var scene;
         /** 结束界面（失败）其它元素展示 */
         GameScene.prototype.showEndFailOther = function () {
             // console.info("showEndFailOther");
-            if (!this.UiEndFail) {
-                return;
-            }
-            this.UiEndFail.showOther();
+            // if (!this.UiEndFail) {
+            // 	return;
+            // }
+            // this.UiEndFail.showOther();
         };
         /** 关闭结束界面（失败） */
         GameScene.prototype.closeEndFail = function () {
-            if (!this.UiEndFail) {
-                return;
-            }
-            this.UiEndFail.close();
-        };
-        GameScene.prototype.createMask = function () {
-            var lightMask = this.lightMask = new com.ComLightMask();
-            this.addChild(lightMask);
-            lightMask.visible = false;
-        };
-        GameScene.prototype.updateMask = function () {
-            var lightMask = this.lightMask;
-            if (!lightMask) {
-                return;
-            }
-            // if (!lightMask.visible) {
+            // if (!this.UiEndFail) {
             // 	return;
             // }
-            if (!this.isShowMask) {
-                return;
-            }
-            var maskParent = lightMask.parent;
-            if (!maskParent) {
-                return;
-            }
-            var obj = gGuideMgr.guideObj;
-            if (!obj) {
-                return;
-            }
-            var target = obj.chat;
-            lightMask.setMaskSize(this.width, this.height, .5);
-            var baseScale = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
-            var w = target.width * baseScale;
-            var h = target.height * baseScale;
-            lightMask.setLightSize(w, 1, h, 70);
-            var pos = this.retObjPos(target, maskParent);
-            lightMask.setLightPos(pos.x - w / 2, pos.y - h / 2);
-            return true;
+            // this.UiEndFail.close();
         };
+        /** 隐藏遮罩，及指引对话 */
+        // private hideMask() {
+        // 	if (!this.showMsked) {
+        // 		return;
+        // 	}
+        // 	this.showMsked = false;
+        // 	egret.clearTimeout(this.showMskDelay);
+        // 	const guidemsk = this.guideBlack;
+        // 	gTween.fadeOut(guidemsk, 300, 1);
+        // }
+        /** 隐藏指引头像 */
+        // private hideHead() {
+        // 	if (!this.showHeaded) {
+        // 		return;
+        // 	}
+        // 	this.showHeaded = false;
+        // 	egret.clearTimeout(this.showHeadDelay);
+        // 	const head = this.head;
+        // 	const conHead = this.conHead;
+        // 	gTween.fadeOut(conHead, 300, 1);
+        // 	head.playIdle();
+        // }
+        /** 隐藏指引冒泡对话 */
+        // private hideBubble() {
+        // 	if (!this.showBubbled) {
+        // 		return;
+        // 	}
+        // 	this.showBubbled = false;
+        // 	egret.clearTimeout(this.showBubbleDelay);
+        // 	const conBubble = this.conBubble;
+        // 	gTween.hideBubble(conBubble, 300, { orgS: 1, orgA: 1 });
+        // }
+        // /** 创建挖空遮罩 */
+        // private lightMask: com.ComLightMask; //挖空遮罩组件
+        // private createMask(): void {
+        // 	let lightMask = this.lightMask = new com.ComLightMask();
+        // 	this.addChild(lightMask);
+        // 	lightMask.visible = false;
+        // }
+        // private updateMask(): boolean {
+        // 	const lightMask = this.lightMask;
+        // 	if (!lightMask) {
+        // 		return;
+        // 	}
+        // 	// if (!lightMask.visible) {
+        // 	// 	return;
+        // 	// }
+        // 	if (!this.isShowMask) {
+        // 		return;
+        // 	}
+        // 	const maskParent = lightMask.parent;
+        // 	if (!maskParent) {
+        // 		return;
+        // 	}
+        // 	const obj = gGuideMgr.guideObj;
+        // 	if (!obj) {
+        // 		return;
+        // 	}
+        // 	const target = (obj as com.ComChat).chat;
+        // 	lightMask.setMaskSize(this.width, this.height, .5);
+        // 	const baseScale: number = gConst.mobileByScale[GameMgr.screenType][GameMgr.mobileType];
+        // 	const w = target.width * baseScale;
+        // 	const h = target.height * baseScale;
+        // 	lightMask.setLightSize(w, 1, h, 70);
+        // 	let pos = this.retObjPos(target, maskParent);
+        // 	lightMask.setLightPos(pos.x - w / 2, pos.y - h / 2);
+        // 	return true;
+        // }
         GameScene.prototype.retObjPos = function (obj, parent) {
             if (!obj || !parent) {
                 return;
@@ -1014,51 +860,6 @@ var scene;
             var y = pos.y + (obj.height / 2 - obj.anchorOffsetY) * obj.scaleY * baseScale;
             pos = gComMgr.toLocal(parent, x, y, pos);
             return pos;
-        };
-        /** 显示遮罩 */
-        GameScene.prototype.showMask = function (inCallBack, inThisObj, outCallBack, outThisObj) {
-            if (this.showMasked) {
-                return;
-            }
-            var lightMask = this.lightMask;
-            if (!lightMask) {
-                return;
-            }
-            // lightMask.visible = true;
-            // gTween.toScale(lightMask.cirleLight, 0, 500, 10, void 0, { duration: 50 }, {
-            // 	callback: () => {
-            // 		if (inCallBack) {
-            // 			inCallBack.call(inThisObj);
-            // 		}
-            // 		gTween.toScale(lightMask.cirleLight, 10, 500, 0, void 0, void 0, {
-            // 			callback: outCallBack,
-            // 			thisObj: outThisObj
-            // 		});
-            // 	}
-            // });
-            this.isShowMask = true;
-            if (this.updateMask()) {
-                this.showMasked = true;
-                gTween.fadeIn(lightMask, 300, 1);
-            }
-        };
-        /** 隐藏遮罩 */
-        GameScene.prototype.hideMask = function () {
-            if (!this.showMasked) {
-                return;
-            }
-            var lightMask = this.lightMask;
-            if (!lightMask) {
-                return;
-            }
-            this.showMasked = false;
-            this.isShowMask = false;
-            gTween.fadeOut(lightMask, 200);
-            var word = this.guideWord;
-            if (!word || !word.parent) {
-                return;
-            }
-            gTween.fadeOut(word, 200);
         };
         /** 显示引导 */
         GameScene.prototype.showGuide = function () {
@@ -1229,8 +1030,6 @@ var scene;
                     maxParticles = cfg.maxParticles;
                 }
             }
-            this.setMaxParticles(particleId0, maxParticles / resName.length);
-            this.startParticle(particleId0, duration);
         };
         return GameScene;
     }(eui.Component));

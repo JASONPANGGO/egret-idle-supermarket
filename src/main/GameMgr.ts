@@ -248,38 +248,38 @@ class GameMgr {
 		this._passId = _passId;
 	}
 
-	/**
-	 * 关卡配置
-	 * @param {number} id 关卡ID
-	 * @param {{ id: number, x: number, keyPinH: number, finish: boolean }[]} pinOnes 所有锁芯
-	 * @param {number} keyPos 钥匙上的点
-	 * @param {number} finishPos 钥匙上，完成的点
-	 */
-	private static passCfg: {
-		"0": data.UnlockData,
-		"1": data.UnlockData,
-	} = {
-		"0": new data.UnlockData(0, [
-			{ id: 0, x: 27.5, keyPinH: 71, finish: false },
-			{ id: 1, x: 73.5, keyPinH: 65, finish: false },
-			{ id: 2, x: 119.5, keyPinH: 72, finish: false },
-			{ id: 3, x: 163.5, keyPinH: 71, finish: false },
-			{ id: 4, x: 208.5, keyPinH: 71, finish: true },
-		], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], [18, 19]),
-		"1": new data.UnlockData(1, [
-			{ id: 0, x: 16.5, keyPinH: 74, finish: false },
-			{ id: 1, x: 56.5, keyPinH: 65, finish: false },
-			{ id: 2, x: 96.5, keyPinH: 73, finish: false },
-			{ id: 3, x: 137.5, keyPinH: 72, finish: false },
-			{ id: 4, x: 177.5, keyPinH: 64, finish: false },
-			{ id: 5, x: 217.5, keyPinH: 65, finish: true },
-		], [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 21, 22, 23, 24], [51, 52]),
-	};
+	// /**
+	//  * 关卡配置
+	//  * @param {number} id 关卡ID
+	//  * @param {{ id: number, x: number, keyPinH: number, finish: boolean }[]} pinOnes 所有锁芯
+	//  * @param {number} keyPos 钥匙上的点
+	//  * @param {number} finishPos 钥匙上，完成的点
+	//  */
+	// private static passCfg: {
+	// 	"0": data.UnlockData,
+	// 	"1": data.UnlockData,
+	// } = {
+	// 	"0": new data.UnlockData(0, [
+	// 		{ id: 0, x: 27.5, keyPinH: 71, finish: false },
+	// 		{ id: 1, x: 73.5, keyPinH: 65, finish: false },
+	// 		{ id: 2, x: 119.5, keyPinH: 72, finish: false },
+	// 		{ id: 3, x: 163.5, keyPinH: 71, finish: false },
+	// 		{ id: 4, x: 208.5, keyPinH: 71, finish: true },
+	// 	], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24], [18, 19]),
+	// 	"1": new data.UnlockData(1, [
+	// 		{ id: 0, x: 16.5, keyPinH: 74, finish: false },
+	// 		{ id: 1, x: 56.5, keyPinH: 65, finish: false },
+	// 		{ id: 2, x: 96.5, keyPinH: 73, finish: false },
+	// 		{ id: 3, x: 137.5, keyPinH: 72, finish: false },
+	// 		{ id: 4, x: 177.5, keyPinH: 64, finish: false },
+	// 		{ id: 5, x: 217.5, keyPinH: 65, finish: true },
+	// 	], [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 21, 22, 23, 24], [51, 52]),
+	// };
 
-	/** 获取关卡数据 */
-	public static getPass(passId: number = this.passId): data.UnlockData {
-		return this.passCfg[passId];
-	}
+	// /** 获取关卡数据 */
+	// public static getPass(passId: number = this.passId): data.UnlockData {
+	// 	return this.passCfg[passId];
+	// }
 
 	// /** 当前项是否为动态项 */
 	// public static isTrend(itemId: number, passId: number = this.passId): boolean {

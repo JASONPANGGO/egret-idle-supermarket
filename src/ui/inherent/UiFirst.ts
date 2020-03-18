@@ -131,9 +131,6 @@ namespace ui {
 			// logoLoc.scale = this.initConLogoS * baseScale;
 			btnLoc.scale = this.initConBtnS * baseScale;
 
-			gTween.rmTweens(conLogo);
-			gTween.rmTweens(conBtn);
-
 			if (this.screenType == gConst.screenType.VERTICAL) {
 				//竖屏
 				logoLoc.scale = this.initConLogoS * baseScale;

@@ -105,8 +105,6 @@ var ui;
             var btnLoc = this.btnLoc;
             // logoLoc.scale = this.initConLogoS * baseScale;
             btnLoc.scale = this.initConBtnS * baseScale;
-            gTween.rmTweens(conLogo);
-            gTween.rmTweens(conBtn);
             if (this.screenType == 1 /* VERTICAL */) {
                 //竖屏
                 logoLoc.scale = this.initConLogoS * baseScale;

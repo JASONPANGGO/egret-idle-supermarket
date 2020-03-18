@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComCloset" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
-        xmlns:item="item.*" width="351" height="333">
-	<e:Group id="con" x="0" y="0" width="351" height="333">
-		<e:Image source="pLv2Ye_png"/>
-		<e:Image id="door"  source="pLv2Ye1_png"/>
-	</e:Group>
-</e:Skin>

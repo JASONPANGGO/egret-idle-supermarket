@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="skins.ComHead" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:com="com.*"
-        xmlns:item="item.*" width="317" height="342">
-	<e:Group id="con" x="0" y="0" height="273" width="241">
-		<e:Image id="head" y="0" x="0" scaleX="1" scaleY="1" source="ui10_head_png"/>
-		<e:Image id="emoji" x="193" y="212" source="ui11_emoji_png" anchorOffsetX="48" anchorOffsetY="48"/>
-	</e:Group>
-	<e:Image id="chat" x="72" y="146" anchorOffsetX="92" anchorOffsetY="3" source="lang_gword3_png"/>
-</e:Skin>

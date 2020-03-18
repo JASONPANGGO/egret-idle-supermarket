@@ -5,14 +5,6 @@
  * @description {G_Const.ts} 框架层常量配置放 G_Const.ts，一般改动不大，只做拓展多。
  */
 declare namespace gConst {
-    /** 打印日志模式 */
-    const logModel: boolean;
-
-    /** 打包提测模式，用于提测时需要规避的一些事情 */
-    const packModel: boolean;
-
-    /** 调试模式 */
-    const debugModel: boolean;
 
     /** 全局可点模式，用于Ending时全局点击可上报安装 window.install() */
     const globalClick: boolean;
